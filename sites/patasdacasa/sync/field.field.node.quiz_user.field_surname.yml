@@ -1,0 +1,19 @@
+uuid: e70f6338-d2d3-4f85-b3f1-1ebc20d44aaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surname
+    - node.type.quiz_user
+id: node.quiz_user.field_surname
+field_name: field_surname
+entity_type: node
+bundle: quiz_user
+label: Sobrenome
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

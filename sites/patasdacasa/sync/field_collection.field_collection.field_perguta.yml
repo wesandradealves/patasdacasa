@@ -1,0 +1,10 @@
+uuid: be92621e-9998-4fef-96da-1a14502f244b
+langcode: en
+status: true
+dependencies: {  }
+id: field_perguta
+label: field_perguta
+enabled: null
+first_field: null
+second_field: null
+bundles: null

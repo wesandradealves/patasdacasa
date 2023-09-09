@@ -1,0 +1,31 @@
+{# Available variables:
+- title = The title
+- text = The internal text
+- image = The main image, if any
+- suggestions = The block with pet suggestions
+#}
+
+<div class="row">
+  <div class="col">
+    <div class="bloco-de-perguntas-quiz">
+      <div class="background-quiz">
+        <h2>Qual o pet que combina com você?</h2> 
+      </div>
+      <div class="caixa-quiz">
+        <div class="text-center">
+          <img src="{{ image }} "/>
+        </div>
+        <h1 class="titulo-resultado">{{ title }}</h1>
+        <div class="conteudo-resultado">{{ text | raw }}</div>
+        <div class="text-center">
+          <a class="btn button__red-large button__red-large-quizz" href="/quiz/perguntas/1">Refazer o Quiz</a>
+        </div>
+        <h2 class="titulo-resultado">Patas para Adoção</h2>
+        <div class="text-center">{{ suggestions }}</div>
+        <div class="text-center">
+          <a class="btn button__red-large button__red-large-quizz" href="/busca">Ver Mais</a>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>

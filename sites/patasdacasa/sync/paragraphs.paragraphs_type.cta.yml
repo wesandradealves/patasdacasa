@@ -1,0 +1,10 @@
+uuid: ec223b79-00ed-4b81-8f68-dfb678dbdfe6
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: CTA
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type for CTA''s'
+behavior_plugins: {  }

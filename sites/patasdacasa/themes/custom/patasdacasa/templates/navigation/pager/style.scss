@@ -1,0 +1,60 @@
+@import '../../../assets/css/variables.scss';
+
+.pager__item {
+    position: relative;
+    width: 55px;
+    overflow: initial !important;
+    &[class*="ellipsis"] {
+        span {
+            font-size: 2.5rem;
+        }
+    }
+    &.is-active {
+        .pagination__bg {
+            path {
+                fill: #b21918
+            }
+        }
+    }
+    &:hover {
+        .pagination__bg {
+            transform: scale(1.1)
+        }
+    }    
+    span {
+        z-index: 2;
+        position: relative;
+        color: white;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+    .pagination__bg {
+        fill: $red;
+        transition: 500ms ease all;
+        path {
+            fill: $red;
+        }
+        position: absolute;
+        z-index: 1;
+        top: calc(50% - 40px);
+        left: calc(50% - 40px);            
+    }
+    // border-radius: 97px 136px 248px 60px/74px 87px 81px 83px;
+    // color: white;
+    // background-color: $red;
+    // font-weight: bold;
+    // font-size: 1.2rem;
+    // text-align: center; 
+    // padding: 8px 9px;
+    // transition: 500ms ease all;
+    // transform: scale(1.0);
+    // &:hover,
+    // &.is-active {
+    //     background-color: $blue;
+    //     transform: scale(1.1); 
+    // }
+    // a {
+    //     text-decoration: none;
+    //     color: white;
+    // }
+}

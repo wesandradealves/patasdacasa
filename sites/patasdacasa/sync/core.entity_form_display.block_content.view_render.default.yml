@@ -1,0 +1,65 @@
+uuid: 32b0b616-2fc1-4c59-bdbf-0b2b01184252
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_render
+    - field.field.block_content.view_render.field_custom_classes
+    - field.field.block_content.view_render.field_field_grid_view_more
+    - field.field.block_content.view_render.field_view_render_display_id
+    - field.field.block_content.view_render.field_view_render_view_id
+  module:
+    - link
+id: block_content.view_render.default
+targetEntityType: block_content
+bundle: view_render
+mode: default
+content:
+  field_custom_classes:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_field_grid_view_more:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_view_render_display_id:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_view_render_view_id:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

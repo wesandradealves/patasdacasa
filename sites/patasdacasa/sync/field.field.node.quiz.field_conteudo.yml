@@ -1,0 +1,21 @@
+uuid: b59a0119-7683-4acf-9a5b-2b788fe96f78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conteudo
+    - node.type.quiz
+  module:
+    - text
+id: node.quiz.field_conteudo
+field_name: field_conteudo
+entity_type: node
+bundle: quiz
+label: conteudo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

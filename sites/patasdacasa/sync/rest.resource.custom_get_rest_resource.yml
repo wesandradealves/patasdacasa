@@ -1,0 +1,18 @@
+uuid: aa075cfa-4989-40d1-8a48-cbfc86c488da
+langcode: en
+status: true
+dependencies:
+  module:
+    - ds_twig_extensions
+    - serialization
+    - user
+id: custom_get_rest_resource
+plugin_id: custom_get_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,17 @@
+uuid: 8bb34a70-3d9b-4475-94c9-d8d016e846c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Quiz
+type: quiz
+description: 'Cadastrar Quiz com perguntas e respostas'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

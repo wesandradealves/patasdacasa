@@ -1,0 +1,34 @@
+
+{{ attach_library('patasdacasa/featured_content_grid') }}
+
+<div{{ attributes.addClass(classes|join(' ')) }}>
+    <div class="featured-content-grid overflow-hidden d-flex flex-wrap align-items-stretch justify-content-between">
+        <div class="news_hero__slides overflow-hidden col-12 col-md-8">
+
+            <div class="mobile-card-show mobile-imagem featured-post h-100 overflow-hidden" style="background-image: url({{data.field_taxonomy_image}})">
+                <div class="featured-post-content h-100 d-flex flex-column justify-content-middle justify-content-lg-start pt-5 pb-5 p-3">
+                    <div class="featured-post-content-inner">
+
+                        <h2 class="d-block mb-3 title">{{data.name}}</h2>
+                        <p  class="d-block text">{{data.description}}</p>
+                    </div>
+                </div>
+                {% if tag == 7 %}
+                    {% set cor_cat = "#1DC4BD" %}
+                {% elseif tag == 25 %}
+                    {% set cor_dog = "#EF161B" %}
+                {% endif %}
+                <svg xmlns="https://www.w3.org/2000/svg" width="623.102" height="274.496" name="hero-mobile" style="fill: {{cor_cat}} {{cor_dog}} {{data.parent.field_taxonomy_theme}}" class="hero__bg hero__bg--mobile d-lg-none" svg_animate="hover-X" blacklist="fill" transform="matrix(2,0,0,2,0,0)"><path width="10px" id="Path_980" data-name="Path 980" d="M0,.048S32.993,251.824,258.6,273.525c24.829,4.622,226.764-8.691,229.345-9.908s104-8.575,111.043-9.49,24.117,0,24.117,0V0Z" transform="translate(623.102 274.496) rotate(180)"></path><desc></desc><defs></defs></svg>
+                <svg xmlns="https://www.w3.org/2000/svg" width="273.868" height="505.537" name="hero-desktop" style="fill: {{cor_cat}} {{data.parent.field_taxonomy_theme}}" class="hero__bg hero__bg--desktop d-none d-lg-block" svg_animate="hover-X" blacklist="fill" transform="matrix(1,0,0,1,0,-215)"><path id="Path_978" data-name="Path 978" d="M0,.048S26.768,251.824,209.8,273.525c20.145,4.622,183.979-39.075,186.073-40.291s67.88-11.162,73.593-12.078,36.065,2.588,36.065,2.588V0Z" transform="translate(0 505.537) rotate(-90)"></path><desc></desc><defs></defs></svg>
+            </div>
+        </div>
+        <div class="overflow-hidden ps-md-4 flex-fill d-md-block news_hero__thumbs">
+            {{ drupal_view('archive', 'block_5', tid, 2) }}
+        </div>
+    </div>  
+</div>
+<style>
+    .hero__bg.hero__bg--desktop.d-none.d-lg-block path {
+        fill: {{data.parent ? data.parent.field_taxonomy_theme : data.field_taxonomy_theme}};
+    }
+</style>

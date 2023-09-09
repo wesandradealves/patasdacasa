@@ -1,0 +1,8 @@
+uuid: 37d9fe5e-33db-409e-9449-ab4852b1303f
+langcode: en
+status: true
+dependencies: {  }
+id: social_networks
+label: 'Social Networks'
+revision: 0
+description: 'Custom block for social networks content'

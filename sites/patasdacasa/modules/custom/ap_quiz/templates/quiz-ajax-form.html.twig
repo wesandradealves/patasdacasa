@@ -1,0 +1,43 @@
+{{ form.titulo }}
+
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+{{ form.quizid }}
+{{ form.nid }}
+
+<div class="form-inputs">
+  {{ form.nome }}
+  {{ form.sobrenome }}
+  {{ form.email }}
+  {{ form.nascimento }}
+</div>
+
+<h3 class="h3 escolha-opcao">Escolha uma opção abaixo</h3>
+
+<div class="form-radios">
+  <div class="item">
+    {{ form.pet.0 }} {{ form.pet.0["#title"]|raw }}
+  </div>
+  <div class="item">
+    {{ form.pet.1 }} {{ form.pet.1["#title"]|raw }}
+  </div>
+  <div class="item">
+    {{ form.pet.2 }} {{ form.pet.2["#title"]|raw }}
+  </div>
+  <div class="item">
+    {{ form.pet.3 }} {{ form.pet.3["#title"]|raw }}
+  </div>
+</div>
+
+<div class="aviso-radios"></div>
+
+<div class="politica">
+  {{ form.politica }} Concordo que a Nestlé use meus dados de contato e interações para me mandar comunicações de marketing. Seu consentimento para este fim é voluntário e você é livre para retirá-lo a qualquer momento. Mais informações disponíveis em nossa <a target="_blank" href="https://www.nestle.com.br/politica-de-privacidade">Política de Privacidade da Nestlé</a>.
+</div>
+
+<div class="aviso-politica"></div>
+
+<div class="submit">
+  {{ form.actions }}
+</div>

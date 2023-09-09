@@ -1,0 +1,29 @@
+uuid: 0ae122ca-b6bd-4c35-a2d8-3f688437c5ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.archive
+  module:
+    - system
+    - views
+  theme:
+    - patasdacasa
+id: views_block__archive_block_2
+theme: patasdacasa
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:archive-block_2'
+settings:
+  id: 'views_block:archive-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/arquivo\r\n/arquivo/*\r\n/pesquisar/*"

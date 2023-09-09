@@ -1,0 +1,59 @@
+@import '../../assets/css/variables.scss';
+
+.node {
+    .post {
+        &-image {
+            position: relative;
+            margin-bottom: 25px;
+            .tag {
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+                width: calc(100%);
+                border-radius: 78% 62% 9% 91%/42% 39% 81% 18%;
+            }
+        }
+        &-header {
+            &--title {
+                font-weight: bold;
+                font-size: 2.8rem;
+            }
+            &--bottom {
+                line-height: 1.5;
+                font-size: .8rem;
+                color: $gray;
+            }
+        }
+        &-content {
+            &--inner {
+                line-height: 1.5;
+                font-size: .9rem;
+                color: $gray;
+                position: relative;
+                h1, h2, h3, h4, h5, h6 {
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+                .sidebar {
+                    @media screen and (min-width: 991px) {
+                        float: left;
+                        width: 340px;
+                        padding-right: 2rem;
+                    }
+                }
+                // > p:last-of-type {
+                //     @media screen and (min-width: 991px) {
+                //         float: right;
+                //         width: calc(100% - 340px);
+                //     }
+                // }
+            }
+        }
+    }
+}
+
+
+.post-image img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}

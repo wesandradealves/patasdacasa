@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Quizzes.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Component\Utility\Crypt;
+use Symfony\Component\HttpFoundation\Cookie;
+
+/**
+ * Implements hook_theme().
+ */
+/*function ap_quiz_theme() {
+  return [
+    'ap_quiz_quizzes' => [
+      'variables' => [
+        'subtitle' => NULL,
+        'internal' => NULL,
+        'label' => NULL,
+        'img' => NULL,
+        'destination' => NULL,
+      ],
+    ],
+    'ap_quiz_result' => [
+      'variables' => [
+        'image' => NULL,
+        'title' => NULL,
+        'text' => NULL,
+        'suggestions' => NULL,
+      ],
+    ],
+  ];
+}*/
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function ap_quiz_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ('node_quiz_user_form' == $form_id) {
+    // Hide node title and give a default value to be changed in the presave.
+    $form['title']['#access'] = FALSE;
+    $form['title']['widget'][0]['value']['#value'] = date('YmdHi');
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function ap_quiz_node_insert(NodeInterface $entity) {
+
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function ap_quiz_node_presave(NodeInterface $entity) {
+
+}
+
+function ap_quiz_theme($existing, $type, $theme, $path) {
+
+  return [
+	  'quiz_ajax_form' => [
+      'render element' => 'form',
+    ],
+  ];
+
+}

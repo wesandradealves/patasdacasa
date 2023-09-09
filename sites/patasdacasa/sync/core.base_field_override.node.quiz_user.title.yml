@@ -1,0 +1,18 @@
+uuid: 71af0332-6b75-40bf-9166-f9b2f41d0655
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.quiz_user
+id: node.quiz_user.title
+field_name: title
+entity_type: node
+bundle: quiz_user
+label: TitleRegistro
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

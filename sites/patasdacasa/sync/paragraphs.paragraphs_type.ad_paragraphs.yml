@@ -1,0 +1,10 @@
+uuid: a7031b41-69a0-45df-96b9-4f336ef359f9
+langcode: en
+status: true
+dependencies: {  }
+id: ad_paragraphs
+label: 'AD Paragraphs'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

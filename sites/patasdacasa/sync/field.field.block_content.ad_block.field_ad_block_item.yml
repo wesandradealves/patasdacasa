@@ -1,0 +1,40 @@
+uuid: d9d6414d-f347-4ed4-9d29-c8a3956b6939
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ad_block
+    - field.storage.block_content.field_ad_block_item
+    - paragraphs.paragraphs_type.ad_paragraphs
+  module:
+    - entity_reference_revisions
+id: block_content.ad_block.field_ad_block_item
+field_name: field_ad_block_item
+entity_type: block_content
+bundle: ad_block
+label: 'AD Block Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ad_paragraphs: ad_paragraphs
+    negate: 0
+    target_bundles_drag_drop:
+      ad_paragraphs:
+        weight: 5
+        enabled: true
+      banner:
+        weight: 6
+        enabled: false
+      cta:
+        weight: 7
+        enabled: false
+      social:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

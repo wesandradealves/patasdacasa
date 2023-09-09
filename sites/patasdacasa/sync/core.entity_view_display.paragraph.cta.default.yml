@@ -1,0 +1,50 @@
+uuid: ecad63e9-91f9-4df9-af7b-e83c3ecec80a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_cta_image
+    - field.field.paragraph.cta.field_cta_theme
+    - field.field.paragraph.cta.field_cta_url
+    - paragraphs.paragraphs_type.cta
+  module:
+    - color_field
+    - link
+    - svg_image
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_cta_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_theme:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  breadcrumbs: true
+  search_api_excerpt: true

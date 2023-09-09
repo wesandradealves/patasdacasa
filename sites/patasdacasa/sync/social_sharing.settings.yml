@@ -1,0 +1,132 @@
+_core:
+  default_config_hash: qQk5pr41uXplTb5bGVrlI-UA8fkAG7ChfGDSxlAODlw
+entities:
+  media: 0
+  node: 0
+  comment: 0
+  block_content: 0
+  contact_message: 0
+  file: 0
+  menu_link_content: 0
+  path_alias: 0
+  shortcut: 0
+  taxonomy_term: 0
+  user: 0
+  paragraph: 0
+share_services:
+  facebook:
+    value: ''
+    enabled: true
+    weight: -100
+  twitter:
+    value: ''
+    enabled: true
+    weight: -100
+  weibo:
+    value: ''
+    enabled: false
+    weight: -29
+  evernote:
+    value: ''
+    enabled: false
+    weight: -28
+  pinterest:
+    value: ''
+    enabled: false
+    weight: -27
+  douban:
+    value: ''
+    enabled: false
+    weight: -26
+  google_bookmarks:
+    value: ''
+    enabled: false
+    weight: -25
+  email:
+    value: ''
+    enabled: false
+    weight: -24
+  flipboard:
+    value: ''
+    enabled: false
+    weight: -23
+  line_me:
+    value: ''
+    enabled: false
+    weight: -22
+  renren:
+    value: ''
+    enabled: false
+    weight: -21
+  telegram:
+    value: ''
+    enabled: false
+    weight: -20
+  hacker_news:
+    value: ''
+    enabled: false
+    weight: -19
+  linkedin:
+    value: ''
+    enabled: false
+    weight: -18
+  getpocket:
+    value: ''
+    enabled: false
+    weight: -17
+  yahoo:
+    value: ''
+    enabled: false
+    weight: -16
+  ok_ru:
+    value: ''
+    enabled: false
+    weight: -15
+  gmail:
+    value: ''
+    enabled: false
+    weight: -14
+  vk:
+    value: ''
+    enabled: false
+    weight: -13
+  reddit:
+    value: ''
+    enabled: false
+    weight: -12
+  blogger:
+    value: ''
+    enabled: false
+    weight: -11
+  tumblr:
+    value: ''
+    enabled: false
+    weight: -10
+  skype:
+    value: ''
+    enabled: false
+    weight: -9
+  livejournal:
+    value: ''
+    enabled: false
+    weight: -8
+  xing:
+    value: ''
+    enabled: false
+    weight: -7
+  whatsapp:
+    value: ''
+    enabled: false
+    weight: -6
+  qzone:
+    value: ''
+    enabled: false
+    weight: -5
+  diaspora:
+    value: ''
+    enabled: false
+    weight: -4
+  instapaper:
+    value: ''
+    enabled: false
+    weight: -3

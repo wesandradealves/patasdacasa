@@ -1,0 +1,20 @@
+system.admin_adotapatas_quiz:
+  title: 'Configuração do Quiz'
+  description: 'Manage Adota Patas quiz configs.'
+  route_name: 'ap_quiz.admin_settings'
+  parent: 'system.admin_adotapatas'
+  weight: 10
+system.admin_adotapatas_quiz_questions:
+  title: 'Perguntas & Respostas'
+  description: 'Manage Adota Patas quiz questions and answers.'
+  route_name: 'config_pages.quiz_questions'
+  parent: 'system.admin_adotapatas_quiz'
+  weight: 20
+system.admin_adotapatas_quiz_perfis:
+  title: 'Gerenciar Perfis'
+  description: 'Manage Adota Patas quiz profiles.'
+  route_name: 'entity.taxonomy_vocabulary.overview_form'
+  route_parameters:
+    taxonomy_vocabulary: 'quiz_profile'
+  parent: 'system.admin_adotapatas_quiz'
+  weight: 30

@@ -1,0 +1,63 @@
+uuid: db6f06d7-6a99-4e0a-a6fe-912620e42caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.especialista.field_cargo_especialista
+    - field.field.taxonomy_term.especialista.field_documento_especialista
+    - field.field.taxonomy_term.especialista.field_taxonomy_image
+    - field.field.taxonomy_term.especialista.field_taxonomy_theme
+    - taxonomy.vocabulary.especialista
+  module:
+    - color_field
+    - svg_image
+    - text
+id: taxonomy_term.especialista.default
+targetEntityType: taxonomy_term
+bundle: especialista
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cargo_especialista:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_documento_especialista:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_taxonomy_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_taxonomy_theme:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true

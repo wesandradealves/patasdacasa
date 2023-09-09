@@ -1,0 +1,19 @@
+uuid: 5b17b6cb-d20c-4adb-93f3-9acbce23248f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_questao
+    - field_collection.field_collection.field_perguta
+id: field_collection_item.field_perguta.field_questao
+field_name: field_questao
+entity_type: field_collection_item
+bundle: field_perguta
+label: Questão
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

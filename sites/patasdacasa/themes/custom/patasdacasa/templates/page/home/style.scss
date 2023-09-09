@@ -1,0 +1,12 @@
+@import '../../../assets/css/variables.scss';
+
+body[class*="home"] {
+    .page {
+        > [class*="container"] {
+            @media (max-width: 991px) {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    }
+}

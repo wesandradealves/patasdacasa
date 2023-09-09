@@ -1,0 +1,8 @@
+uuid: 6e62a1ff-6adc-4049-8e07-9fe3d7984e79
+langcode: en
+status: true
+dependencies: {  }
+id: ad_block
+label: 'AD Block'
+revision: 0
+description: 'Block for sidebar ad''s'

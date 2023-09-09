@@ -1,0 +1,22 @@
+uuid: 16373ffd-d306-4055-b353-b5523d5d9bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_theme
+    - taxonomy.vocabulary.especialista
+  module:
+    - color_field
+id: taxonomy_term.especialista.field_taxonomy_theme
+field_name: field_taxonomy_theme
+entity_type: taxonomy_term
+bundle: especialista
+label: 'Taxonomy Theme'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

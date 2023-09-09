@@ -1,0 +1,18 @@
+uuid: ce65937b-bf75-4093-9f96-f01cf7f93fd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ong_email
+field_name: field_ong_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

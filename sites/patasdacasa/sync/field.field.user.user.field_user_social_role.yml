@@ -1,0 +1,20 @@
+uuid: 48ebc48f-b786-444f-b31e-de64fa17b4f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_social_role
+  module:
+    - user
+id: user.user.field_user_social_role
+field_name: field_user_social_role
+entity_type: user
+bundle: user
+label: 'User Social Role'
+description: 'Field for user social job role (eg.: cargo in portuguese)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

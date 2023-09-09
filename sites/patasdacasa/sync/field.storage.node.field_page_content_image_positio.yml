@@ -1,0 +1,27 @@
+uuid: 7b74d5a7-5681-4aa1-ba78-8a6d64d0e248
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_page_content_image_positio
+field_name: field_page_content_image_positio
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Left
+      label: Left
+    -
+      value: Right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

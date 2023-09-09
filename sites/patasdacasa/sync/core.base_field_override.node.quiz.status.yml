@@ -1,0 +1,22 @@
+uuid: 96918041-6790-4b76-b5bd-e30799a1791d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.quiz
+id: node.quiz.status
+field_name: status
+entity_type: node
+bundle: quiz
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

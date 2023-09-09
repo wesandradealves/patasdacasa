@@ -1,0 +1,19 @@
+uuid: fd2861c1-6044-4ffa-ad20-6dedc4f52079
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.quiz_user
+id: node.quiz_user.field_name
+field_name: field_name
+entity_type: node
+bundle: quiz_user
+label: Nome
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

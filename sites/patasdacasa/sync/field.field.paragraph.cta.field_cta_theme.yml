@@ -1,0 +1,22 @@
+uuid: 28640f9b-f5d1-42c2-8aaf-086bdd04ead5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_theme
+    - paragraphs.paragraphs_type.cta
+  module:
+    - color_field
+id: paragraph.cta.field_cta_theme
+field_name: field_cta_theme
+entity_type: paragraph
+bundle: cta
+label: 'CTA Theme'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

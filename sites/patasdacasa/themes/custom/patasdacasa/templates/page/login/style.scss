@@ -1,0 +1,29 @@
+@import '../../../assets/css/variables.scss';
+
+body[class*="login"] {
+    main {
+        padding: 0 !important;
+        .login {
+            height: 100vh;
+            .container {
+                max-width: 320px;
+                form {
+                    input, button {
+                        border-radius: 0;
+                    }
+                    input {
+                        border: 0px;
+                        border-bottom: 1px $gray solid;
+                        margin-bottom: 15px;
+                    }
+                    button {
+                        width: 100%;
+                        border: 0;
+                        background-color: $red;
+                    }
+                }
+            }
+        }        
+    }
+}
+

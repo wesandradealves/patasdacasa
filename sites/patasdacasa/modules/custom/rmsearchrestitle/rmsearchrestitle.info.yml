@@ -1,0 +1,5 @@
+name: 'Remove Search Result Title'
+type: module
+description: 'Module to remove the default search result title'
+core_version_requirement: ^8 || ^9
+package: 'Patas da Casa'

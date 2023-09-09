@@ -1,0 +1,31 @@
+uuid: 1aa55d3b-8f1b-458e-96c6-9bb955cb8fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_networks
+    - field.storage.block_content.field_social_media
+    - paragraphs.paragraphs_type.social
+  module:
+    - entity_reference_revisions
+id: block_content.social_networks.field_social_media
+field_name: field_social_media
+entity_type: block_content
+bundle: social_networks
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social: social
+    negate: 0
+    target_bundles_drag_drop:
+      social:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

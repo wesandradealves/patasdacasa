@@ -1,0 +1,88 @@
+{#
+/**
+    * @file
+    * Theme override to display a block.
+    *
+    * Available variables:
+    * - plugin_id: The ID of the block implementation.
+    * - label: The configured label of the block if visible.
+    * - configuration: A list of the block's configuration values.
+    *   - label: The configured label for the block.
+    *   - label_display: The display settings for the label.
+    *   - provider: The module or other provider that provided this block plugin.
+    *   - Block plugin specific settings will also be stored here.
+    * - content: The content of this block.
+    * - attributes: array of HTML attributes populated by modules, intended to
+    *   be added to the main container tag of this template.
+    *   - id: A valid HTML ID and guaranteed unique.
+    * - title_attributes: Same as attributes, except applied to the main title
+    *   tag that appears in the template.
+    * - title_prefix: Additional output populated by modules, intended to be
+    *   displayed in front of the main title tag that appears in the template.
+    * - title_suffix: Additional output populated by modules, intended to be
+    *   displayed after the main title tag that appears in the template.
+    *
+    * @see template_preprocess_block()
+    */
+#}
+{%
+    set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    ]
+%}
+{% set rows = articles %}
+{% block content %}
+    {{ attach_library('patasdacasa/featured_content_grid') }}
+    <div{{ attributes.addClass(classes) }}>
+        <div class="featured-content-grid overflow-hidden d-flex flex-wrap align-items-stretch justify-content-between">
+            {% if rows and rows|length %}
+                <div class="news_hero__slides overflow-hidden col-12 col-md-8">
+                    <div class="news_hero__slide owl-carousel owl-theme">
+                        {% for key, row in rows %}
+                            {% include directory ~ '/templates/partials/post-card/post-card.html.twig' with { 
+                                data: {
+                                    nid: row.nid,
+                                    title: row.title,
+                                    url: row.url,
+                                    image: row.image,
+                                    terms: {
+                                        tid: row.terms.0.tid,
+                                        parent: row.terms.0.parent.tid,
+                                        name: row.terms.0.name,
+                                        field_taxonomy_theme: row.terms.0.parent.field_taxonomy_theme
+                                    }
+                                }, 
+                                layout: 'full',
+                                classes: ['p-lg-4', 'h-100'],
+                                index: key
+                            } %}                 
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="overflow-hidden flex-fill ps-md-4 d-none d-md-block news_hero__thumbs">
+                    {% for key, row in rows %}
+                        {% include directory ~ '/templates/partials/post-card/post-card.html.twig' with { 
+                            data: {
+                                nid: row.nid,
+                                title: row.title,
+                                url: row.url,
+                                image: row.image,
+                                terms: {
+                                    tid: row.terms.0.tid,
+                                    parent: row.terms.0.parent.tid,
+                                    name: row.terms.0.name,
+                                    field_taxonomy_theme: row.terms.0.parent.field_taxonomy_theme
+                                }
+                            }, 
+                            layout: 'full',
+                            classes: ['mb-4'],
+                            index: key
+                        } %}   
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>  
+    </div>
+{% endblock %}

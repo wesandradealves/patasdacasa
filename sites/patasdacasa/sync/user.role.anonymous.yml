@@ -1,0 +1,32 @@
+uuid: 1d662eb1-2d99-4bf8-b2f9-41f4cbfe48aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - node.type.quiz_user
+    - rest.resource.custom_get_rest_resource
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - node
+    - rest
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'create quiz_user content'
+  - 'restful get custom_get_rest_resource'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'

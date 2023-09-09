@@ -1,0 +1,27 @@
+uuid: cfdcbdeb-43e2-46d2-b751-6bf8e5fa8e33
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_networks
+    - field.field.block_content.social_networks.field_social_media
+  module:
+    - entity_reference_revisions
+id: block_content.social_networks.default
+targetEntityType: block_content
+bundle: social_networks
+mode: default
+content:
+  field_social_media:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true

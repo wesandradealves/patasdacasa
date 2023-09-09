@@ -1,0 +1,30 @@
+uuid: df13362d-59a8-4ab3-bc57-10a2602fcfc3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:featured_content_grid:31e677f9-b5c7-4bf8-b995-9d3e5c559d12'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: homegridhero
+theme: patasdacasa
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:31e677f9-b5c7-4bf8-b995-9d3e5c559d12'
+settings:
+  id: 'block_content:31e677f9-b5c7-4bf8-b995-9d3e5c559d12'
+  label: 'Home grid hero'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

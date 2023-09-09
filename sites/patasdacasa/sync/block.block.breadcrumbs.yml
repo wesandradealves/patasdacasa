@@ -1,0 +1,24 @@
+uuid: 2eaf9e20-886b-4b09-94c0-027791c1faed
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - patasdacasa
+id: breadcrumbs
+theme: patasdacasa
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /user/

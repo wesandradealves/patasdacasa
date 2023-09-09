@@ -1,0 +1,15 @@
+{# Available variables:
+- title = The block title
+- subtitle = The block subtitle
+- internal = The internal text
+- label = The button label
+- img = The background image URL
+- destination = The link to the destination node
+#}
+
+{{ title }}
+<h3 class="text-center">{{ subtitle }}</h3>
+<div class="bloco-banner" style="background: url({{ img }}) center center">
+    <h4>{{ internal }}</h4>
+    <a class="btn button__red-large button__red-large-quizz" href="{{ destination }}">{{ label }}</a>
+</div>

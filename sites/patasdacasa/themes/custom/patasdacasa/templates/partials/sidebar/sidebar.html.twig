@@ -1,0 +1,6 @@
+{{ attach_library('patasdacasa/sidebar') }}
+
+<aside class="sidebar {% if class and class|length %} {{class|join(' ')}} {% else %} col-4 ps-4 d-none d-lg-block {% endif %}">
+    {{ drupal_region('sidebar') }}
+        {{ drupal_view('archive', 'block_3', term.tid) }}
+</aside>

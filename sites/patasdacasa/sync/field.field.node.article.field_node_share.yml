@@ -1,0 +1,171 @@
+uuid: 8acf36f7-8c17-4b4f-afba-4594e2e5230d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_node_share
+    - node.type.article
+  module:
+    - social_sharing
+id: node.article.field_node_share
+field_name: field_node_share
+entity_type: node
+bundle: article
+label: 'Node Share'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    share_services: null
+    value: null
+    services_values:
+      weibo:
+        value: ''
+      evernote:
+        value: ''
+      pinterest:
+        value: ''
+      douban:
+        value: ''
+      google_bookmarks:
+        value: ''
+      email:
+        value: ''
+      flipboard:
+        value: ''
+      line_me:
+        value: ''
+      renren:
+        value: ''
+      telegram:
+        value: ''
+      hacker_news:
+        value: ''
+      linkedin:
+        value: ''
+      getpocket:
+        value: ''
+      yahoo:
+        value: ''
+      ok_ru:
+        value: ''
+      gmail:
+        value: ''
+      vk:
+        value: ''
+      reddit:
+        value: ''
+      facebook:
+        value: ''
+      blogger:
+        value: ''
+      tumblr:
+        value: ''
+      skype:
+        value: ''
+      livejournal:
+        value: ''
+      xing:
+        value: ''
+      whatsapp:
+        value: ''
+      qzone:
+        value: ''
+      diaspora:
+        value: ''
+      instapaper:
+        value: ''
+      twitter:
+        value: ''
+default_value_callback: ''
+settings:
+  share_services:
+    weibo:
+      weight: '-29'
+      enabled: 0
+    evernote:
+      weight: '-28'
+      enabled: 0
+    pinterest:
+      weight: '-27'
+      enabled: 0
+    douban:
+      weight: '-26'
+      enabled: 0
+    google_bookmarks:
+      weight: '-25'
+      enabled: 0
+    email:
+      weight: '-24'
+      enabled: 0
+    flipboard:
+      weight: '-23'
+      enabled: 0
+    line_me:
+      weight: '-22'
+      enabled: 0
+    renren:
+      weight: '-21'
+      enabled: 0
+    telegram:
+      weight: '-20'
+      enabled: 0
+    hacker_news:
+      weight: '-19'
+      enabled: 0
+    linkedin:
+      weight: '-18'
+      enabled: 0
+    getpocket:
+      weight: '-17'
+      enabled: 0
+    yahoo:
+      weight: '-16'
+      enabled: 0
+    ok_ru:
+      weight: '-15'
+      enabled: 0
+    gmail:
+      weight: '-14'
+      enabled: 0
+    vk:
+      weight: '-13'
+      enabled: 0
+    reddit:
+      weight: '-12'
+      enabled: 0
+    facebook:
+      enabled: '1'
+      weight: '-11'
+    blogger:
+      weight: '-10'
+      enabled: 0
+    tumblr:
+      weight: '-9'
+      enabled: 0
+    skype:
+      weight: '-8'
+      enabled: 0
+    livejournal:
+      weight: '-7'
+      enabled: 0
+    xing:
+      weight: '-6'
+      enabled: 0
+    whatsapp:
+      enabled: '1'
+      weight: '-5'
+    qzone:
+      weight: '-4'
+      enabled: 0
+    diaspora:
+      weight: '-3'
+      enabled: 0
+    instapaper:
+      weight: '-2'
+      enabled: 0
+    twitter:
+      weight: '-1'
+      enabled: 0
+field_type: social_sharing

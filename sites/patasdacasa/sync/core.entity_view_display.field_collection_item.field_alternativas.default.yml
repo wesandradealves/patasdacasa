@@ -1,0 +1,50 @@
+uuid: b421177a-d274-445c-8c39-2a09e7713405
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_alternativas.field_resposta
+    - field.field.field_collection_item.field_alternativas.field_resultado
+    - field_collection.field_collection.field_alternativas
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_per:
+      children:
+        - field_resposta
+        - field_resultado
+      label: PER
+      parent_name: ''
+      region: hidden
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+id: field_collection_item.field_alternativas.default
+targetEntityType: field_collection_item
+bundle: field_alternativas
+mode: default
+content:
+  field_resposta:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_resultado:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  breadcrumbs: true
+  search_api_excerpt: true

@@ -1,0 +1,39 @@
+uuid: c000d44d-e58c-40db-872e-c0fe362720d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ad_paragraphs.field_ad_paragraphs_image
+    - field.field.paragraph.ad_paragraphs.field_ad_paragraphs_url
+    - paragraphs.paragraphs_type.ad_paragraphs
+  module:
+    - link
+    - svg_image
+id: paragraph.ad_paragraphs.default
+targetEntityType: paragraph
+bundle: ad_paragraphs
+mode: default
+content:
+  field_ad_paragraphs_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ad_paragraphs_url:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  breadcrumbs: true
+  search_api_excerpt: true

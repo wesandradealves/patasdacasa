@@ -1,0 +1,10 @@
+uuid: ae985c36-dcff-4ea9-aaf3-b9ccabc6c4c1
+langcode: en
+status: true
+dependencies: {  }
+id: social
+label: Social
+icon_uuid: null
+icon_default: null
+description: 'Paragraph for social networks content'
+behavior_plugins: {  }

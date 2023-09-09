@@ -1,0 +1,22 @@
+uuid: 3725b85e-e2a8-4bdd-b617-b989e6948b0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resultados
+id: node.resultados.promote
+field_name: promote
+entity_type: node
+bundle: resultados
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

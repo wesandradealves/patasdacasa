@@ -1,0 +1,23 @@
+uuid: da575455-a055-41ca-9952-7e2fe9908943
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_home
+    - node.type.quiz_user
+id: node.quiz_user.field_page_home
+field_name: field_page_home
+entity_type: node
+bundle: quiz_user
+label: 'Política de Privacidade'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,14 @@
+@import '../../../assets/css/variables.scss';
+
+[aria-labelledby="system-breadcrumb"] {
+    ol, ul {
+        li {
+            font-size: .9rem;
+            color: gray;
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}

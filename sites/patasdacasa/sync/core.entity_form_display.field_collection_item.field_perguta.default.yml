@@ -1,0 +1,30 @@
+uuid: e2d2a7b7-b6d8-4e3f-a58e-85e15fcf97e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_perguta.field_alternativas
+    - field.field.field_collection_item.field_perguta.field_questao
+    - field_collection.field_collection.field_perguta
+  module:
+    - field_collection
+id: field_collection_item.field_perguta.default
+targetEntityType: field_collection_item
+bundle: field_perguta
+mode: default
+content:
+  field_alternativas:
+    type: field_collection_embed
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_questao:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

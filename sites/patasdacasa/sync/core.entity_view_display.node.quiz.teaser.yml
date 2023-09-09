@@ -1,0 +1,34 @@
+uuid: 80a373ca-fb7f-4cce-914a-eb1276a93d2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quiz.field_conteudo
+    - field.field.node.quiz.field_imagem
+    - field.field.node.quiz.field_perguta
+    - node.type.quiz
+  module:
+    - user
+id: node.quiz.teaser
+targetEntityType: node
+bundle: quiz
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  breadcrumbs: true
+  field_conteudo: true
+  field_imagem: true
+  field_perguta: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: e65ac735-d0ef-4fb9-9861-fae86191a0f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_resultado
+    - field_collection.field_collection.field_alternativas
+    - node.type.resultados
+id: field_collection_item.field_alternativas.field_resultado
+field_name: field_resultado
+entity_type: field_collection_item
+bundle: field_alternativas
+label: Resultado
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resultados: resultados
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

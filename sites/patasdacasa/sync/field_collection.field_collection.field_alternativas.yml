@@ -1,0 +1,10 @@
+uuid: 3c6bfa35-956e-43eb-947b-c594b429d9f3
+langcode: en
+status: true
+dependencies: {  }
+id: field_alternativas
+label: field_alternativas
+enabled: null
+first_field: null
+second_field: null
+bundles: null

@@ -1,0 +1,17 @@
+{{ attach_library('patasdacasa/post_card') }}
+
+<div onclick="window.open('{{ data.url }}', '_top')" class="d-flex post-card tpl-{{layout ? layout : 'default'}} {{classes|join(' ')}}" data-hash="{{ index }}">
+  <div class="post-card-inner-full post-card-inner flex-wrap h-100 w-100 overflow-hidden d-flex">
+    <picture class="post-card--thumb overflow-hidden">
+      <img src="{{data.image}}" />
+    </picture>
+    <div class="p-3 w-100 d-flex post-card--content">
+      <span data-theme="{{data.terms.field_taxonomy_theme}}" class="post-card--tag tag tag--{{data.terms.tid}}" style="background-color:{{data.terms.field_taxonomy_theme}}">{{data.terms.name}}</span>
+      <h3 class="post-card--title"><a href="{{ data.url }}">{% if layout != 'compact' %} {{ data.title }} {% else %} {{  data.title|length > 70 ? data.title|slice(0, 70) ~ '...' : data.title }} {% endif %}</a></h3>
+      {% if layout != 'compact' %}
+      <p class="post-card--text"><a href="{{ data.url }}">{{data.text}}</a></p>
+      <a class="post-card--read-more" data-theme="{{data.terms.field_taxonomy_theme}}" style="color: {{data.terms.field_taxonomy_theme}} !important" href="{{ data.url }}">Leia mais >></a>
+      {% endif %}
+    </div>
+  </div>
+</div>

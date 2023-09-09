@@ -1,0 +1,10 @@
+uuid: 49241fcb-999f-4ff2-bd27-57ef293d70e8
+langcode: en
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type for page banner'
+behavior_plugins: {  }

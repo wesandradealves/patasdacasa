@@ -1,0 +1,8 @@
+uuid: df97fcb7-2441-4537-9bfa-7eca46e62b3b
+langcode: en
+status: true
+dependencies: {  }
+id: cta_row
+label: 'CTA Row'
+revision: 0
+description: 'Block which includes CTA''s in one row straight'

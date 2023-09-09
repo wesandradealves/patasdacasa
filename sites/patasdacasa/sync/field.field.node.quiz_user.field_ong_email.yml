@@ -1,0 +1,19 @@
+uuid: 20b20aae-8e8e-4a98-8622-c435fd7e642c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ong_email
+    - node.type.quiz_user
+id: node.quiz_user.field_ong_email
+field_name: field_ong_email
+entity_type: node
+bundle: quiz_user
+label: E-mail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('patasdacasa/breadcrumb') }}
+
+<nav role="navigation" aria-labelledby="system-breadcrumb" class="mb-4 d-none d-lg-block">
+    <div class="container">
+        <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+        <ol class="d-flex align-items-center">
+            {# {% for index, item in breadcrumb %}          #}
+            <li class="d-flex align-items-center">
+                <li><a href="{{ url('<front>') }}">Página Inicial</a></li>
+                <li class="ps-2 pe-2">•</li>
+                {% if 'view' in current_uri %}
+                    <li> 
+                        {% if 'author' in current_uri %} 
+                            Autor 
+                        {% elseif 'especialista' in current_uri %}
+                            Especialista 
+                        {% elseif 'taxonomy_term' in current_uri %}
+                            <a href="/tag">Tag</a>   
+                        {% elseif 'archive' in current_uri %}
+                            <a href="/arquivo/noticia">Arquivo</a>                             
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if 'author' in current_uri %}
+                            <span class="ps-2 pe-2">•</span>
+                            {% set author = getUser(is_int(param) ? param : getNodeIdByAlias(param, 'user')['id']) %}
+                            {{author.field_user_fullname}}
+                        {% elseif 'especialista' in current_uri %}
+                            <span class="ps-2 pe-2">•</span>
+                            {% set especialista = is_int(param) ? get_term(param) : getTermByAlias(param) %}
+                            {{especialista.name}}
+                        {% elseif 'taxonomy_term' in current_uri %}
+                            {% for index, p in params if 'arg' in index %}
+                                <span class="ps-2 pe-2">•</span>
+                                {{get_term(p).name}}
+                            {% endfor %}
+                        {% elseif 'archive' in current_uri %}
+                            {% for index, p in params if 'arg' in index %}
+                                <span class="ps-2 pe-2">•</span>
+                                {{p}}
+                            {% endfor %}
+                        {% endif %}
+                    </li>
+                {% elseif 'node' in current_uri %}
+                    {% set type = node.type.entity.label|lower|replace({' ' : '-'}) %}
+                    {% if type == 'article' %}
+                        {% if terms and terms|length %}
+                            {% for term in terms %}
+                                <li>
+                                    <a href="/tag/{{term.tid}}">{{term.name}}</a>
+                                    <span class="ps-2 pe-2">•</span> 
+                                </lI>                            
+                            {% endfor %}
+                        {% else %}
+                            <li class="ps-2 pe-2">•</li> 
+                        {% endif %}
+                    {% endif %}
+                    <li>{{node.title.value}}</li>
+                {% endif %}
+            </li>              
+        </ol>
+    </div>
+</nav>

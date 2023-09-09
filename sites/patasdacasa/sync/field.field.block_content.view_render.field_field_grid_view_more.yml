@@ -1,0 +1,23 @@
+uuid: a6d07025-e9af-4845-939d-13cd13adcd87
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_render
+    - field.storage.block_content.field_field_grid_view_more
+  module:
+    - link
+id: block_content.view_render.field_field_grid_view_more
+field_name: field_field_grid_view_more
+entity_type: block_content
+bundle: view_render
+label: 'Archive Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,29 @@
+uuid: f89c5875-b9c6-4099-8f87-5ee92eb96f92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_quiz
+    - node.type.page
+    - node.type.quiz
+id: node.page.field_page_quiz
+field_name: field_page_quiz
+entity_type: node
+bundle: page
+label: Quiz
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      quiz: quiz
+    sort:
+      field: status
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

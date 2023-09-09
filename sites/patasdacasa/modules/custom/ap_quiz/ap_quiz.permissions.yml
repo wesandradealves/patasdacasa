@@ -1,0 +1,6 @@
+manage adota patas quiz:
+  title: 'Manage Adota Patas Quiz Module'
+  description: 'Configure the Adota Patas quiz module.'
+administer user_quiz:
+  title: 'Administer user_quiz settings'
+  restrict access: true

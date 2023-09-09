@@ -1,0 +1,89 @@
+uuid: cd8e0155-3b40-4290-b31b-fe02df63c6f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz.field_conteudo
+    - field.field.node.quiz.field_imagem
+    - field.field.node.quiz.field_perguta
+    - node.type.quiz
+  module:
+    - field_collection
+    - field_group
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_pergunta:
+      children:
+        - field_pergunta
+        - field_resposta
+        - group_resposta_valor
+      label: 'Pergunta e Resposta'
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+    group_resposta_valor:
+      children:
+        - field_valor
+      label: 'Resposta e Valor'
+      parent_name: group_pergunta
+      region: content
+      weight: 23
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+id: node.quiz.default
+targetEntityType: node
+bundle: quiz
+mode: default
+content:
+  field_conteudo:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_imagem:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_perguta:
+    type: field_collection_list
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true
+  sharing_buttons: true

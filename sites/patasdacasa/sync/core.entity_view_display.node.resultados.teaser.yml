@@ -1,0 +1,40 @@
+uuid: a302f28f-de7b-40fd-82b1-bb699fa508fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.resultados.body
+    - field.field.node.resultados.field_imagem_resultado
+    - node.type.resultados
+  module:
+    - text
+    - user
+id: node.resultados.teaser
+targetEntityType: node
+bundle: resultados
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  breadcrumbs: true
+  field_imagem_resultado: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,96 @@
+uuid: ff23d82f-df49-41bc-ba9e-071bc80716c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz_user.field_date
+    - field.field.node.quiz_user.field_name
+    - field.field.node.quiz_user.field_ong_email
+    - field.field.node.quiz_user.field_page_home
+    - field.field.node.quiz_user.field_pagina
+    - field.field.node.quiz_user.field_possui_pet
+    - field.field.node.quiz_user.field_quiz
+    - field.field.node.quiz_user.field_surname
+    - node.type.quiz_user
+  module:
+    - options
+    - user
+id: node.quiz_user.default
+targetEntityType: node
+bundle: quiz_user
+mode: default
+content:
+  field_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ong_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_page_home:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_pagina:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_possui_pet:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_quiz:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_surname:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true
+  sharing_buttons: true

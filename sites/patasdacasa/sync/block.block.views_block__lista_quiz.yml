@@ -1,0 +1,29 @@
+uuid: faa4ed58-798e-4558-a046-564e1655f5b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.lista_quiz
+  module:
+    - system
+    - views
+  theme:
+    - patasdacasa
+id: views_block__lista_quiz
+theme: patasdacasa
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:lista_quiz-block_1'
+settings:
+  id: 'views_block:lista_quiz-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/quiz/*\r\n/quiz"

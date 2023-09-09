@@ -1,0 +1,16 @@
+patasdacasa.sm:
+  label: sm
+  mediaQuery: 'all and (min-width: 360px)'
+  weight: 1
+patasdacasa.md:
+  label: md
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 2
+patasdacasa.xl:
+  label: xl
+  mediaQuery: 'all and (min-width: 1336px)'
+  weight: 3
+patasdacasa.xxl:
+  label: xxl
+  mediaQuery: 'all and (min-width: 1440px)'
+  weight: 4

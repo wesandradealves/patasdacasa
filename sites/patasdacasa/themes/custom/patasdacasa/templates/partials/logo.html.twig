@@ -1,0 +1,5 @@
+<h1{{ attributes.addClass([classes]) }}>
+    <a href="/" title="{{site_name}}" class="d-flex justify-content-center align-items-center">
+        <img src="{% if logo %} {{logo}} {% else %} /{{ base_path ~ directory }}/logo.svg {% endif %}" alt="{{site_name}}" />
+    </a>
+</h1>

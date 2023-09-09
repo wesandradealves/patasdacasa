@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('patasdacasa/taxonomy') }}
+
+{% if taxonomies|length %}
+  <h3 class="d-block block-title text-center w-100 mb-4">{{display_title}}</h3>
+  {{ drupal_entity('block_content', 13) }}
+  <div class="tag-list d-flex flex-wrap justify-content-center align-items-center">
+    {% for term in taxonomies %}
+      <a style="background-color: {{term.parent ? term.parent.field_taxonomy_theme : term.field_taxonomy_theme}} !important;" class="tag tag-list--item m-2 mb-0 text-center" href="{{term.url|replace({"taxonomy/term":"tag"})}}" data-type="{{term.type}}" data-theme="{{term.parent ? term.parent.field_taxonomy_theme : term.field_taxonomy_theme}}">{{term.name}}</a>
+    {% endfor %}
+  </div>
+{% else %}
+  {% for row in rows %}
+    {%
+      set row_classes = [
+        default_row_class ? 'views-row',
+      ]
+    %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{ row.content }}
+    </div>
+  {% endfor %}  
+{% endif %}

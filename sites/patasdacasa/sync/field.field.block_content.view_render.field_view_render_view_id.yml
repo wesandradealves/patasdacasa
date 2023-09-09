@@ -1,0 +1,19 @@
+uuid: d89fc9dd-afe8-477c-9ecb-8c898baf9f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_render
+    - field.storage.block_content.field_view_render_view_id
+id: block_content.view_render.field_view_render_view_id
+field_name: field_view_render_view_id
+entity_type: block_content
+bundle: view_render
+label: 'View ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

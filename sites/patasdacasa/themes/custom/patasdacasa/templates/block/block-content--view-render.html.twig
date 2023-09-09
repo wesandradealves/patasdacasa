@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the content of an administrative block.
+ *
+ * Available variables:
+ * - content: List of administrative menu items. Each menu item contains:
+ *   - link: Link to the admin section.
+ *   - title: Short name of the section.
+ *   - description: Description of the administrative menu item.
+ *   - url: URI to the admin section.
+ *   - options: URL options. See \Drupal\Core\Url::fromUri() for details.
+ * - attributes: HTML attributes to be added to the element.
+ * - compact: Boolean indicating whether compact mode is turned on or not.
+ *
+ * @see template_preprocess_admin_block_content()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+    set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    ]
+%}
+{% if content.field_custom_classes.0['#context'].value %}
+    {% if ',' in content.field_custom_classes.0['#context'].value %}
+        {%
+            set classes = classes|merge(content.field_custom_classes.0['#context'].value|split(','))
+        %}
+    {% else %}
+        {%
+            set classes = classes|merge([content.field_custom_classes.0['#context'].value])
+        %}
+    {% endif %}
+{% endif %}
+{% set field_view_render_limit = content.field_view_render_limit.0['#markup'] %}
+{% set field_view_render_view_id = content.field_view_render_view_id.0['#context'].value %}
+{% set field_view_render_display_id = content.field_view_render_display_id.0['#context'].value %}
+<section{{ attributes.addClass(classes) }}>
+    {% set field_view_render_show_title = content.field_view_render_show_title %}
+
+    {% if label_display == 'visible' %}
+        <h3 class="d-block block-title text-center w-100 mb-4">{{label}}</h3>
+    {% endif %}
+
+    {{ drupal_view(field_view_render_view_id, field_view_render_display_id, field_view_render_limit) }}
+    {% if field_field_grid_view_more and field_field_grid_view_more.uri %}
+        <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+            <a class="section-view-all pt-4 pb-4 p-5" href="{% if 'internal:' in field_field_grid_view_more.uri %} {{ field_field_grid_view_more.uri|replace({ 'internal:': '' }) }} {%else%} {{field_field_grid_view_more.uri}} {%endif%}">{{field_field_grid_view_more.label}}</a>
+        </div>
+    {% endif %}
+</section>

@@ -1,0 +1,15 @@
+{% if quizid %}
+    <section{{ attributes.addClass(classes) }}>
+    <div class="bloco-quiz">
+        <div class="formulario-quiz">
+        {{getQuiz(quizid)|raw}}
+        </div>
+        <div class="html-quiz">
+
+        </div>
+        <div class="resultado-quiz">
+
+        </div>
+    </div>
+    </section>
+{% endif %}

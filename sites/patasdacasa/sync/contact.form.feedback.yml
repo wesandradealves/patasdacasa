@@ -1,0 +1,14 @@
+uuid: 60bd5ffc-1cf6-4c6c-8a9d-9ed3f1ac106b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - wesandradealves@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

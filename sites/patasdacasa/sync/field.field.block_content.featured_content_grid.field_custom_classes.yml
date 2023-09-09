@@ -1,0 +1,19 @@
+uuid: 99891848-7a96-4bcd-b7ad-e51d664731e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_content_grid
+    - field.storage.block_content.field_custom_classes
+id: block_content.featured_content_grid.field_custom_classes
+field_name: field_custom_classes
+entity_type: block_content
+bundle: featured_content_grid
+label: 'Custom Classes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

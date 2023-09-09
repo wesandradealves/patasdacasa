@@ -1,0 +1,67 @@
+uuid: 5b8e3763-e2c4-48ff-be39-f2d62e8a288c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_user_description
+    - field.field.user.user.field_user_fullname
+    - field.field.user.user.field_user_social_role
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - svg_image
+    - user
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_user_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_user_fullname:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_user_social_role:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true

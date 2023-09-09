@@ -1,0 +1,31 @@
+uuid: 6e3680f5-3e2b-497a-89e8-fbe73f7b043d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pagina
+    - node.type.article
+    - node.type.page
+    - node.type.quiz_user
+id: node.quiz_user.field_pagina
+field_name: field_pagina
+entity_type: node
+bundle: quiz_user
+label: Página
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      page: page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

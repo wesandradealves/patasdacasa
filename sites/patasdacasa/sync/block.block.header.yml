@@ -1,0 +1,30 @@
+uuid: 90851034-7e8e-4443-b079-ed66ba7baa62
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b0693677-c73a-4bcc-8271-a4a6af9b333c'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: header
+theme: patasdacasa
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:b0693677-c73a-4bcc-8271-a4a6af9b333c'
+settings:
+  id: 'block_content:b0693677-c73a-4bcc-8271-a4a6af9b333c'
+  label: Header
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/*/login\r\n/login"

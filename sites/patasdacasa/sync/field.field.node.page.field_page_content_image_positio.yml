@@ -1,0 +1,21 @@
+uuid: 0026175c-3039-4028-97d2-83ff1df827ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_content_image_positio
+    - node.type.page
+  module:
+    - options
+id: node.page.field_page_content_image_positio
+field_name: field_page_content_image_positio
+entity_type: node
+bundle: page
+label: 'Page Content Image Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,100 @@
+{#
+/**
+ * @file
+ * Theme override for a main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+{{ attach_library('patasdacasa/author') }}
+
+{%
+  set classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% set date = "now"|date('Y') %}
+  <div class="main-news-row">
+    <div class="news_grid d-flex align-items-stretch justify-content-between">
+      <div class="flex-fill">
+        <span class="post-card--tag tag --author ps-5 pe-5">Autor</span> 
+        {% include directory ~ '/templates/partials/author-block/author-block.html.twig' with { 
+            data: getUser(is_int(uid) ? uid : getNodeIdByAlias(uid, 'user')['id']),
+            layout: 'full'
+        } %}  
+      </div>
+    </div>
+    {# <h3 style="color: {{term.parent.field_taxonomy_theme}}" class="d-block block-title text-center w-100 mt-4 mb-4">{{display_title}}</h3> #}
+    <div class="d-flex align-items-stretch flex-wrap mt-5">
+      <h3 style="color: {{term.parent.field_taxonomy_theme}}" class="d-block block-title text-center w-100 mt-4 mb-4">{{display_title}}</h3>
+      {# {{ drupal_view('author', 'block_1', is_int(uid) ? uid : getNodeIdByAlias(uid, 'user')['id']) }} #}
+      
+      {% if query %}
+        <div class="grid d-flex flex-wrap align-items-stretch">
+          {% for nid in query %}
+            {% set node = getNode(nid) %}
+
+            {% include directory ~ '/templates/partials/post-card/post-card.html.twig' with { 
+                data: {
+                    nid: node.nid,
+                    cid: node.cid,
+                    uid: node.uid,
+                    title: node.title,
+                    text: node.text|slice(0, 132)|raw ~ '...',
+                    url: node.url,
+                    image: node.image,
+                    terms: {
+                        tid: node.terms.0.tid,
+                        parent: node.terms.0.parent.tid,
+                        name: node.terms.0.name,
+                        field_taxonomy_theme: node.terms.0.parent ? node.terms.0.parent.field_taxonomy_theme : node.terms.0.field_taxonomy_theme
+                    }
+                }, 
+                layout: '',
+                classes: ['col-12', 'col-md-4', 'col-lg-3'],
+                index: key
+            } %}
+          {% endfor %}
+        </div>     
+        {{pager}} 
+      {% elseif rows %}
+        <div class="grid d-flex flex-wrap align-items-stretch">
+          {{rows}}    
+        </div>
+        {{pager}}
+      {% else %}
+          <p class="d-block w-100 text-center">Nenhum resultado foi encontrado</p>
+      {% endif %}
+      {{empty}}      
+    </div>
+  </div>   
+</div>

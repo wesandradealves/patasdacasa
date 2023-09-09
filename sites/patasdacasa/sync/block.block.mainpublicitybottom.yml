@@ -1,0 +1,30 @@
+uuid: e5660930-a099-4b91-8e3f-9c728bfc2f7a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:ad_block:c1ba68cb-3e94-461c-8111-0bd387da188c'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: mainpublicitybottom
+theme: patasdacasa
+region: bottombar
+weight: 0
+provider: null
+plugin: 'block_content:c1ba68cb-3e94-461c-8111-0bd387da188c'
+settings:
+  id: 'block_content:c1ba68cb-3e94-461c-8111-0bd387da188c'
+  label: 'Main Publicity (Bottom)'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/noticia/\r\n/noticia/*"

@@ -1,0 +1,8 @@
+uuid: 2ba66e47-154c-49ac-841d-ff8d9bf7d6ec
+langcode: en
+status: true
+dependencies: {  }
+id: view_render
+label: 'View Render'
+revision: 0
+description: 'Block for render specific views'

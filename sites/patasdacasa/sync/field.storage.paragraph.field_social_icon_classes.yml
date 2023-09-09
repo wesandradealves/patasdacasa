@@ -1,0 +1,19 @@
+uuid: 4b0c063c-0324-4b36-aa35-97f5e7380e66
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_social_icon_classes
+field_name: field_social_icon_classes
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

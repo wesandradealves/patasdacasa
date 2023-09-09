@@ -1,0 +1,44 @@
+uuid: 77baa615-d70d-4ecf-bbce-a5632045a3e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quiz_user.field_date
+    - field.field.node.quiz_user.field_name
+    - field.field.node.quiz_user.field_ong_email
+    - field.field.node.quiz_user.field_page_home
+    - field.field.node.quiz_user.field_pagina
+    - field.field.node.quiz_user.field_possui_pet
+    - field.field.node.quiz_user.field_quiz
+    - field.field.node.quiz_user.field_surname
+    - node.type.quiz_user
+  module:
+    - user
+id: node.quiz_user.teaser
+targetEntityType: node
+bundle: quiz_user
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  breadcrumbs: true
+  field_date: true
+  field_name: true
+  field_ong_email: true
+  field_page_home: true
+  field_pagina: true
+  field_possui_pet: true
+  field_quiz: true
+  field_surname: true
+  langcode: true
+  search_api_excerpt: true

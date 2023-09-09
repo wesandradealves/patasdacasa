@@ -1,0 +1,39 @@
+{#
+/**
+  * @file
+  * Default theme implementation to display a view of unformatted rows.
+  *
+  * Available variables:
+  * - title: The title of this group of rows. May be empty.
+  * - rows: A list of the view's row items.
+  *   - attributes: The row's HTML attributes.
+  *   - content: The row's content.
+  * - view: The view object.
+  * - default_row_class: A flag indicating whether default classes should be
+  *   used on rows.
+  *
+  * @see template_preprocess_views_view_unformatted()
+  *
+  * @ingroup themeable
+  */
+#}
+{% for key, row in rows %}
+  {% set nid = row.content['#row'].nid %}
+  {% if nid %}
+    {% block content %}
+      <div class="container">
+          <div class="bloco-quiz">
+            <div class="formulario-quiz">
+              {{getQuiz(nid)|raw}}
+            </div>
+            <div class="html-quiz">
+
+            </div>
+            <div class="resultado-quiz">
+
+            </div>
+          </div>
+      </div>
+    {% endblock %}
+  {% endif %}
+{% endfor %}

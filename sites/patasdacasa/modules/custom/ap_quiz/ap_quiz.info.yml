@@ -1,0 +1,7 @@
+name: Adota Patas Quiz
+type: module
+description: Custom module to manage the quiz system.
+package: Patas da Casa
+core_version_requirement: ^8 || ^9
+php: 7.3
+version: 1.0.0

@@ -1,0 +1,85 @@
+uuid: 6428dd37-5a05-4ee1-92c3-636a7454cc88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz.field_conteudo
+    - field.field.node.quiz.field_imagem
+    - field.field.node.quiz.field_perguta
+    - image.style.thumbnail
+    - node.type.quiz
+  module:
+    - field_collection
+    - field_group
+    - path
+    - svg_image
+    - text
+third_party_settings:
+  field_group:
+    group_respostas:
+      children: {  }
+      label: Respostas
+      region: hidden
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: node.quiz.default
+targetEntityType: node
+bundle: quiz
+mode: default
+content:
+  field_conteudo:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_imagem:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_perguta:
+    type: field_collection_embed
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

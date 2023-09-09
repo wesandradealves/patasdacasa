@@ -1,0 +1,30 @@
+uuid: 70d5fd20-420e-42f8-bab5-a8aa6309ee42
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:cta_row:1be367ce-8a96-4ac0-bebb-3ff10f4fbe5c'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: homecta
+theme: patasdacasa
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:1be367ce-8a96-4ac0-bebb-3ff10f4fbe5c'
+settings:
+  id: 'block_content:1be367ce-8a96-4ac0-bebb-3ff10f4fbe5c'
+  label: 'Home CTA'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

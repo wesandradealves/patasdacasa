@@ -1,0 +1,100 @@
+uuid: e1a7de42-7ba5-4191-be0e-24174f2338d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz_user.field_date
+    - field.field.node.quiz_user.field_name
+    - field.field.node.quiz_user.field_ong_email
+    - field.field.node.quiz_user.field_page_home
+    - field.field.node.quiz_user.field_pagina
+    - field.field.node.quiz_user.field_possui_pet
+    - field.field.node.quiz_user.field_quiz
+    - field.field.node.quiz_user.field_surname
+    - node.type.quiz_user
+id: node.quiz_user.default
+targetEntityType: node
+bundle: quiz_user
+mode: default
+content:
+  field_date:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ong_email:
+    type: email_default
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_page_home:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_pagina:
+    type: entity_reference_autocomplete
+    weight: 28
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_possui_pet:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_quiz:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_surname:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,25 @@
+uuid: 3a8e7043-4982-4471-9c12-59ab2581ad12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_theme
+    - taxonomy.vocabulary.tags
+  module:
+    - color_field
+id: taxonomy_term.tags.field_taxonomy_theme
+field_name: field_taxonomy_theme
+entity_type: taxonomy_term
+bundle: tags
+label: 'Taxonomy Theme'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#000000'
+    opacity: !!float 1
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

@@ -1,0 +1,23 @@
+uuid: e63aa46e-19bb-4695-8f5c-303af9204f4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_page_banner_style
+    - paragraphs.paragraphs_type.banner
+  module:
+    - options
+id: paragraph.banner.field_page_banner_style
+field_name: field_page_banner_style
+entity_type: paragraph
+bundle: banner
+label: 'Banner Style'
+description: 'Style for banner (full width or container width style)'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Container Style'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

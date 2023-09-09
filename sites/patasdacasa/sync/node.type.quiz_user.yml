@@ -1,0 +1,17 @@
+uuid: d1c98098-4647-49bd-a83b-21c2352bc6aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Cadastro Quiz'
+type: quiz_user
+description: 'Tipo de conteúdo para armazenamento e gestão de cadastros de usuários do Quiz.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

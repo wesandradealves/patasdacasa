@@ -1,0 +1,73 @@
+uuid: e7be161d-a9df-4be8-8b50-dd1492eb07d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_page_banner
+    - field.field.node.page.field_page_content_image
+    - field.field.node.page.field_page_content_image_positio
+    - field.field.node.page.field_page_quiz
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - options
+    - svg_image
+    - text
+    - user
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_page_banner:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_page_content_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_page_content_image_positio:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_page_quiz:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

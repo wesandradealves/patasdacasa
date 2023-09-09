@@ -1,0 +1,85 @@
+    {#
+    /**
+     * @file
+     * Default theme implementation for a breadcrumb trail.
+     *
+     * Available variables:
+     * - breadcrumb: Breadcrumb trail items.
+     *
+     * @ingroup themeable
+     */
+    #}
+    {# {% if breadcrumb %}
+      <nav role="navigation" aria-labelledby="system-breadcrumb" class="mb-4 d-none d-lg-block">
+        <div class="container">
+            <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+            <ol class="d-flex align-items-center">
+              {% for index, item in breadcrumb %}         
+                <li class="d-flex align-items-center">
+                  {% if item.url %}
+                    {% if nodetype == 'article' %}
+                      {% if item.url == '/' %}
+                        <a href="{{ item.url|replace({'/taxonomy/term/' : '/tag/'}) }}">{{ item.text }}</a>
+                      {% else %}
+                        {% set tid = item.url|replace({"/": ""})|raw %}
+                        {% set isint = is_int(tid) %}       
+
+                        {% if isint == 1 %}
+                          {% set term = get_term(tid) %} 
+
+                          {% if term.parent.tid %}
+                            <a href="{{ term.parent.url|replace({'/taxonomy/term/' : '/tag/'}) }}">{{ term.parent.name }}</a>
+                            <span class="ps-2 pe-2">•</span>
+                          {% endif %} 
+
+                          <a href="{{ term.url|replace({'/taxonomy/term/' : '/tag/'}) }}">{{ term.name }}</a>
+                        {% endif %}                        
+                      {% endif %}
+                    {% else %}
+                      <a href="{{ item.url|replace({'/taxonomy/term/' : '/tag/'}) }}">{{ item.text }}</a>
+                    {% endif %}
+                  {% else %}
+                    {{ item.text }}  
+                  {% endif %}
+
+                  {% if index+1 < breadcrumb|length %}
+                    <span class="ps-2 pe-2">•</span>
+                  {% endif %}                    
+                </li>              
+              {% endfor %}
+            </ol>
+        </div>
+      </nav>
+    {% endif %} #}
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if breadcrumb %}
+  <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <div class="container pb-4">
+      <ol class="d-flex align-items-center">
+      {% for index, item in breadcrumb %}
+        <li class="{% if index > 0 %}ps-1 ms-1{%endif%}">
+          {% if item.url %}
+            <a href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+        {% if (index + 1) < breadcrumb|length %}
+        <li class="ps-1 ms-1">•</li>
+        {% endif %}
+      {% endfor %}
+      </ol>
+    </div>
+  </nav>
+{% endif %}

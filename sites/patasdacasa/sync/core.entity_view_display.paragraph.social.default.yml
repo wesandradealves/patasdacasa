@@ -1,0 +1,37 @@
+uuid: bd0064f2-1d31-48bb-b507-cd24d5292994
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social.field_social_icon_classes
+    - field.field.paragraph.social.field_social_url
+    - paragraphs.paragraphs_type.social
+  module:
+    - link
+id: paragraph.social.default
+targetEntityType: paragraph
+bundle: social
+mode: default
+content:
+  field_social_icon_classes:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true
+  search_api_excerpt: true

@@ -1,0 +1,31 @@
+uuid: 3fe2f3ca-adef-4d8e-b8a3-bc4728b22271
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_alternativas
+    - field_collection.field_collection.field_alternativas
+    - field_collection.field_collection.field_perguta
+  module:
+    - field_collection
+id: field_collection_item.field_perguta.field_alternativas
+field_name: field_alternativas
+entity_type: field_collection_item
+bundle: field_perguta
+label: Alternativas
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:field_collection_item'
+  handler_settings:
+    target_bundles:
+      field_alternativas: field_alternativas
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: field_collection

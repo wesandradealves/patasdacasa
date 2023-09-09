@@ -1,0 +1,42 @@
+{#
+/**
+  * @file
+  * Default theme implementation to display a view of unformatted rows.
+  *
+  * Available variables:
+  * - title: The title of this group of rows. May be empty.
+  * - rows: A list of the view's row items.
+  *   - attributes: The row's HTML attributes.
+  *   - content: The row's content.
+  * - view: The view object.
+  * - default_row_class: A flag indicating whether default classes should be
+  *   used on rows.
+  *
+  * @see template_preprocess_views_view_unformatted()
+  *
+  * @ingroup themeable
+  */
+#}
+{% for key, row in rows %}
+  {% set nid = row.content['#row'].nid %}
+  {% set node = getNode(nid) %}
+
+  {% include directory ~ '/templates/partials/post-card/post-card.html.twig' with { 
+      data: {
+          nid: node.nid,
+          title: node.title,
+          text: node.text|slice(0, 132)|raw ~ '...',
+          url: node.url,
+          image: node.image,
+          terms: {
+              tid: node.terms.0.tid,
+              parent: node.terms.0.parent.tid,
+              name: node.terms.0.name,
+              field_taxonomy_theme: node.terms.0.parent ? node.terms.0.parent.field_taxonomy_theme : node.terms.0.field_taxonomy_theme
+          }
+      }, 
+      layout: '',
+      classes: ['col-12', 'col-md-4', 'col-lg-3', 'ps-2', 'pe-2'],
+      index: key
+  } %}  
+{% endfor %}

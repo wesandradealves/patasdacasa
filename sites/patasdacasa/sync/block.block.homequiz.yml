@@ -1,0 +1,30 @@
+uuid: f545de51-ef91-4b92-9846-c1875f7d948d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ad25c41b-2e99-4186-8e98-0b44e69f090a'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: homequiz
+theme: patasdacasa
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:ad25c41b-2e99-4186-8e98-0b44e69f090a'
+settings:
+  id: 'block_content:ad25c41b-2e99-4186-8e98-0b44e69f090a'
+  label: 'Home Quiz'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

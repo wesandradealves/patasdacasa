@@ -1,0 +1,36 @@
+uuid: 2281f1f5-cf94-4fe6-bb15-d8882bbff33b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_row
+    - field.field.block_content.cta_row.field_cta_item
+    - field.field.block_content.cta_row.field_custom_classes
+  module:
+    - entity_reference_revisions
+id: block_content.cta_row.default
+targetEntityType: block_content
+bundle: cta_row
+mode: default
+content:
+  field_cta_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_custom_classes:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true

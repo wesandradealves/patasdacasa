@@ -1,0 +1,11 @@
+uuid: b7837564-9835-419c-bd0a-bfe345d9af43
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.quiz_user
+id: node.quiz_user
+target_entity_type_id: node
+target_bundle: quiz_user
+default_langcode: site_default
+language_alterable: false

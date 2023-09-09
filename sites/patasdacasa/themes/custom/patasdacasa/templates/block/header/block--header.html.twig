@@ -1,0 +1,57 @@
+
+{{ attach_library('patasdacasa/header') }}
+
+<header class="header">
+    <div class="container-fluid top-header pe-0 d-flex">
+        <nav class="navigation d-flex align-items-center align-items-center">
+            <button class="hamburger hamburger--collapse m-auto" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </nav>
+
+        {% include directory ~ '/templates/partials/logo.html.twig' with { 
+            classes: 'logo m-auto'
+        } %}            
+
+        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="100.452" height="80" name="header-bg" class="header__bg ms-auto d-xl-none">
+            <g id="bg" transform="translate(-170.919 80)">
+                <g id="bg-2" data-name="bg" transform="translate(0 -95)">
+                    <path id="caminho_985" data-name="Caminho 985" d="M-9536.106,3456s-10.065,78.393,72.519,86.113c6.138.574,48.293,2.765,67.707,4.4,12.732,1.07,23.357,1.961,23.357,1.961l-54.022-92.47Z" transform="translate(9710 -3456)" fill="#1dc4bd"></path>
+                    <path id="subtracaoo_23" data-name="SubtraÃ§Ã£o 23" d="M9824.361-3351.509h0a233.173,233.173,0,0,1-36.814-5.065,147.221,147.221,0,0,1-28.039-9.207,100.293,100.293,0,0,1-20.431-12.2,78.329,78.329,0,0,1-13.985-14.055,71.9,71.9,0,0,1-10.651-19.681,76.96,76.96,0,0,1-4.008-18.208,74.633,74.633,0,0,1,.795-21.07h230.306a137.354,137.354,0,0,1-6.465,22.218,134.985,134.985,0,0,1-18.217,33.333,107.667,107.667,0,0,1-35.17,30.43,109.928,109.928,0,0,1-25.566,9.746A135.865,135.865,0,0,1,9824.361-3351.509Z" transform="translate(-9510 3451)" fill="#ef1515">
+                    </path>            
+                </g>
+            </g>
+            <desc></desc>
+        </svg>                      
+        
+        <div class="d-none w-100 flex-fill d-xl-flex align-items-center justify-content-between">
+            <div class="main-menu w-100 d-flex justify-content-end">
+                <div class="me-auto">
+                    {{ drupal_block('search_form_block') }}
+                </div>
+                {{ drupal_menu('shortcuts') }}
+            </div>
+
+            <div class="header-bg">
+                <svg xmlns="https://www.w3.org/2000/svg" width="1082.436" height="103.996" name="header-bg-desktop" svg_animate="hover-X" class="header__bg--desktop" transform="matrix(1,0,0,1,0,0)">
+                    <g id="bg" transform="translate(113.509 14)">
+                        <path id="subtracao_7" data-name="SubtraÃ§Ã£o 7" d="M196.078,77.311h0a43.321,43.321,0,0,1-10.026-1.094A198.29,198.29,0,0,0,152.639,67.2a100.177,100.177,0,0,0-17.168-1.429h-1.3c-.419,0-.722,0-.98-.005-11.058.108-14.566.273-17.128.393-1.707.08-2.94.139-5.729.139-4.275,0-12.153-.134-31.22-.532a104.343,104.343,0,0,1-21.576-3.589,84.062,84.062,0,0,1-17.331-7A76.923,76.923,0,0,1,16.468,35.118,85.968,85.968,0,0,1,4.274,13.942,81.386,81.386,0,0,1,0,0H329.513C334,4.594,345.56,16.5,356,27.833c5.938,6.444,10.589,11.7,13.824,15.623,3.916,4.749,5.789,7.585,5.568,8.43-.047.181-.192.273-.431.273h-.044c-.172-.007-.4-.011-.681-.011-4.823,0-24.974,1.1-46.307,2.274h-.021c-21.214,1.163-43.15,2.365-54.09,2.721-7.237.235-17.525,3.942-29.436,8.233C228.857,70.97,211.26,77.311,196.078,77.311Z" transform="translate(-65 -0.001)" fill="#1dc4bd"></path>
+                        <path id="caminho_1058" data-name="Caminho 1058" d="M3690.039,654.7h931.536s-2.708,94.963-172.466,79.839-366.153-17.5-568.633,5.269S3690.039,654.7,3690.039,654.7Z" transform="translate(-3689.903 -654.698)" fill="#ef161b"></path>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    {# Navegação #}
+    <aside class="container-fluid d-none bottom-header pt-5">
+        {{ drupal_block('search_form_block') }}
+        <nav class="navigation --aside-menu-navigation mt-4 pb-4">
+            {{ drupal_menu('shortcuts') }}
+            {{ drupal_menu('footer-navigation') }}
+        </nav>
+    </aside>
+</header>

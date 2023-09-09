@@ -1,0 +1,19 @@
+uuid: de9d766e-f113-4205-82ee-867c6921f0c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_resposta
+    - field_collection.field_collection.field_alternativas
+id: field_collection_item.field_alternativas.field_resposta
+field_name: field_resposta
+entity_type: field_collection_item
+bundle: field_alternativas
+label: Resposta
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

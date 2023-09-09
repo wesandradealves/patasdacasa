@@ -1,0 +1,36 @@
+name: Patas da Casa
+type: theme
+description: 'Patas da Casa - Barrio SubTheme.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap_barrio
+
+libraries:
+  - patasdacasa/fontawesome
+  - patasdacasa/bootstrap
+  - patasdacasa/hamburger
+  - patasdacasa/custom-scrollbar
+  - patasdacasa/post_card
+  - patasdacasa/global-styling
+  - patasdacasa/override
+  - patasdacasa/polyfill
+  - patasdacasa/vue
+  - patasdacasa/vue-router
+  - patasdacasa/vuex
+  - patasdacasa/axios
+  - patasdacasa/owl_carousel
+  - patasdacasa/tinyslider
+  - patasdacasa/quiz
+
+regions:
+  header: 'Header'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  bottombar: 'Bottombar'
+  footer: 'Footer'
+
+components:
+  namespaces:
+    partials:
+      - templates/partials

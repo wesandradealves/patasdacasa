@@ -1,0 +1,30 @@
+uuid: 023509dc-c9fb-4095-956e-f13f1e967453
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:view_render:78b22c0e-3af2-49bb-a085-946fd03048e9'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: tudosobrepets
+theme: patasdacasa
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:78b22c0e-3af2-49bb-a085-946fd03048e9'
+settings:
+  id: 'block_content:78b22c0e-3af2-49bb-a085-946fd03048e9'
+  label: 'Tudo sobre pets'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,30 @@
+uuid: f80a64ba-0f7b-41a0-ae47-98a61bedcacb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:14ebbb65-fddd-4055-b773-1a1c941fe1d1'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: taxfilter
+theme: patasdacasa
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:14ebbb65-fddd-4055-b773-1a1c941fe1d1'
+settings:
+  id: 'block_content:14ebbb65-fddd-4055-b773-1a1c941fe1d1'
+  label: 'Tax Filter'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/tag/*'

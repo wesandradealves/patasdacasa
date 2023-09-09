@@ -1,0 +1,27 @@
+uuid: 15db99eb-e0b8-407a-9966-a9180027a9a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_page_banner_style
+field_name: field_page_banner_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Full Width'
+      label: 'Full Width'
+    -
+      value: 'Container Style'
+      label: 'Container Style'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

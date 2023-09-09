@@ -1,0 +1,273 @@
+.compact {
+    [class*="read-more"],
+    [class*="text"] {
+      display: none;
+    }
+
+    .post-card-inner {
+      flex-flow: row wrap;
+    }
+
+    .post-card--tag {
+      font-size: .9rem;
+    }
+
+    .post-card--title {
+      font-size: .95rem;
+      line-height: 1;
+    }
+
+    .post-card--content {
+      justify-content: flex-start;
+
+      &::before {
+        @media screen and (min-width: 768px) {
+          height: 100%;
+          left: -18px;
+          top: 0;
+          width: 40px;
+        }
+      }
+    }
+
+    [class*="thumb"] {
+      width: 110px;
+      height: auto;
+    }
+
+    [class*="content"] {
+      flex: 1;
+    }  
+}
+
+.post-card {
+  position: relative;
+  // height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    transform: translate(2px, 2px);
+  }
+
+  a {
+    text-decoration: none;
+    color: #000!important;
+
+  }
+
+  &-inner {
+    border-radius: 10px;
+    flex-flow: column wrap;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .15);
+  }
+
+  &--content {
+    justify-content: flex-end;
+    flex-flow: column;
+    position: relative;
+    z-index: 4;
+
+    >* {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -17px;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 1;
+    }
+  }
+
+  &--hash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 4;
+  }
+
+  &--title {
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    font-family: 'Baloo Bhai 2';
+    color: #000;
+  }
+
+  &--text {
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    margin-top: .5rem;
+    font-family: 'Poppins';
+    line-height: 1.5;
+    color: #000;
+  }
+
+  &--thumb {
+    position: relative;
+    z-index: 1;
+    transition: 500ms ease-in-out all;
+    transform: scale(1.0);
+    height: 256px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+    }
+  }
+
+  &--read-more {
+    text-decoration: none;
+    color: black;
+    margin-top: .5rem;
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) { 
+    [class*="read-more"],
+    [class*="text"] {
+      display: none;
+    }
+
+    .post-card-inner {
+      flex-flow: row wrap;
+    }
+
+    .post-card--tag {
+      font-size: .9rem;
+    }
+
+    .post-card--title {
+      font-size: 1.1rem;
+    }
+
+    .post-card--content {
+      justify-content: flex-start;
+
+      &::before {
+          height: 100%;
+          left: -18px;
+          top: 0;
+          width: 40px;
+      }
+    }
+
+    [class*="thumb"] {
+      height: 272px;
+      flex: 0 0 auto;
+
+      @media screen and (max-width: 768px) {
+        width: 145px;
+        height: 170px;
+        & + * {
+          flex: 1;
+        }        
+      }
+    }
+
+    [class*="content"] {
+      flex: 1;
+    }      
+  }
+
+  &.tpl {
+    flex-flow: row wrap;
+
+    &-compact {
+      @extend .compact;
+      height: 130px;
+    }
+
+    &-full {
+      flex-flow: column wrap;
+      justify-content: flex-end;
+      align-items: flex-end;
+      overflow: hidden;
+
+      @media screen and (max-width: 768px) { 
+        border-radius: 0;
+        .post-card--content {
+            justify-content: flex-end;
+        }        
+      }
+
+      a {
+        color: white !important
+      }
+
+      .post-card-inner {
+        justify-content: flex-end;
+      }
+      
+      .post-card--read-more {
+        display: block;
+      }
+
+      .post-card--content::before,
+      [class*="text"] {
+        display: none;
+      }
+
+      &:hover {
+        .tag {
+          transition: 500ms ease all;
+          transform: scale(1.1);
+        }
+      }
+
+      [class*="title"] {
+        color: white !important;
+        a {
+          color: inherit;
+        }
+      }
+
+      &::after {
+        content: '';
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      [class*="thumb"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        img {
+          position: inherit;
+          top: inherit;
+          left: inherit;
+          width: inherit;
+          height: inherit;
+          z-index: inherit;
+          display: inherit;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

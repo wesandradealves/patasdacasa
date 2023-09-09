@@ -1,0 +1,36 @@
+@import '../../../assets/css/variables.scss';
+
+.search-results {
+    &.node_search-results {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+        margin: 0 -.3rem;
+        .post-card {
+            height: 100%;
+        }
+    }    
+}
+
+.block-title {
+    &.--search {
+        box-shadow: 0 0 10px 0 rgba(119,119,119,.7);
+        border-radius: 20px;
+        font-size: 1.6rem !important;
+        @media screen and (min-width: 768px) {
+            font-size: 1.9rem !important;
+        }
+        font-weight: initial;
+        > span {
+            &:last-of-type:not(:only-child) {
+                color: $blue;
+            }
+
+            &:first-of-type {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }        
+}

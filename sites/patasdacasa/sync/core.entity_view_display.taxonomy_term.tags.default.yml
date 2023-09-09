@@ -1,0 +1,46 @@
+uuid: f78214bf-6425-429d-92fd-c4de58973ae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tags.field_taxonomy_image
+    - field.field.taxonomy_term.tags.field_taxonomy_theme
+    - taxonomy.vocabulary.tags
+  module:
+    - color_field
+    - svg_image
+    - text
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content:
+  description:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_taxonomy_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_taxonomy_theme:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true

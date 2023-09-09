@@ -1,0 +1,32 @@
+uuid: 35fff680-c7e8-43cf-aa68-a914a4472270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_alternativas.field_resposta
+    - field.field.field_collection_item.field_alternativas.field_resultado
+    - field_collection.field_collection.field_alternativas
+id: field_collection_item.field_alternativas.default
+targetEntityType: field_collection_item
+bundle: field_alternativas
+mode: default
+content:
+  field_resposta:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_resultado:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

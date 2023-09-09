@@ -1,0 +1,69 @@
+{#
+/**
+    * @file
+    * Default theme implementation for main view template.
+    *
+    * Available variables:
+    * - attributes: Remaining HTML attributes for the element.
+    * - css_name: A css-safe version of the view name.
+    * - css_class: The user-specified classes names, if any.
+    * - header: The optional header.
+    * - footer: The optional footer.
+    * - rows: The results of the view query, if any.
+    * - empty: The content to display if there are no rows.
+    * - pager: The optional pager next/prev links to display.
+    * - exposed: Exposed widget form/info to display.
+    * - feed_icons: Optional feed icons to display.
+    * - more: An optional link to the next page of results.
+    * - title: Title of the view, only used when displaying in the admin preview.
+    * - title_prefix: Additional output populated by modules, intended to be
+    *   displayed in front of the view title.
+    * - title_suffix: Additional output populated by modules, intended to be
+    *   displayed after the view title.
+    * - attachment_before: An optional attachment view to be displayed before the
+    *   view content.
+    * - attachment_after: An optional attachment view to be displayed after the
+    *   view content.
+    * - dom_id: Unique id for every view being printed to give unique class for
+    *   Javascript.
+    *
+    * @see template_preprocess_views_view()
+    *
+    * @ingroup themeable
+    */
+#}
+{%
+    set classes = [
+    'search-results',
+    context.plugin ~ '-results',
+    ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+{% block content %}
+  {{ attach_library('patasdacasa/search') }}
+
+  <div class="main-news-row">
+      <div class="d-flex flex-column flex-lg-row flex-wrap align-items-stretch justify-content-between">
+        <div class="d-flex flex-column flex-lg-row flex-wrap col-12 col-lg-8 mb-5 mb-lg-0">
+            {% if rows %}
+                <h3 class="d-flex flex-column flex-md-row p-4 justify-content-between align-items-center block-title w-100 mb-4 --search">
+                  <span class="flex-fill">Resultados para: {{q}}</span> 
+                  <span class="text-end ps-4">{{ view.total_rows }} resultados</span>
+                </h3>            
+                <div class="d-flex align-items-stretch flex-wrap">
+                    {{ rows }}
+                </div>
+                {{pager}}
+            {% else %}
+                <p class="d-block w-100 text-center">Nenhum resultado foi encontrado</p>
+            {% endif %}
+        </div>
+        
+        {% include directory ~ '/templates/partials/sidebar/sidebar.html.twig' with { 
+          class: ['col-12', 'col-lg-4', 'ps-lg-4', 'mt-5', 'mt-lg-0']
+        } %}  
+      </div>
+  </div>   
+{% endblock %}

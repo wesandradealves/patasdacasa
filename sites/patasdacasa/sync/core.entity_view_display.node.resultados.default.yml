@@ -1,0 +1,53 @@
+uuid: 163fc602-24a7-45c0-a73c-acd38b8e10af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resultados.body
+    - field.field.node.resultados.field_imagem_resultado
+    - node.type.resultados
+  module:
+    - svg_image
+    - text
+    - user
+id: node.resultados.default
+targetEntityType: node
+bundle: resultados
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_imagem_resultado:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true

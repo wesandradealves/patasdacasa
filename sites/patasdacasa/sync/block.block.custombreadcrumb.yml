@@ -1,0 +1,30 @@
+uuid: 030ca0a4-2f6f-49eb-8045-24296cd531c4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:54813838-9dad-4b72-9e5a-2648f3f7ff40'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: custombreadcrumb
+theme: patasdacasa
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'block_content:54813838-9dad-4b72-9e5a-2648f3f7ff40'
+settings:
+  id: 'block_content:54813838-9dad-4b72-9e5a-2648f3f7ff40'
+  label: 'Custom Breadcrumb'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/user/\r\n<front>"

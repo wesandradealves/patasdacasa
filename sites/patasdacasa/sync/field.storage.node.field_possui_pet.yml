@@ -1,0 +1,33 @@
+uuid: 0cfa60dd-24c5-4971-a3e5-21ab60c67a06
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_possui_pet
+field_name: field_possui_pet
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Não tenho pets'
+      label: 'Não tenho pets'
+    -
+      value: 'Tenho cão'
+      label: 'Tenho cão'
+    -
+      value: 'Tenho gato'
+      label: 'Tenho gato'
+    -
+      value: 'Tenho cão e gato'
+      label: 'Tenho cão e gato'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

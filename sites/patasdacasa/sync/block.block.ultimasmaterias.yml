@@ -1,0 +1,30 @@
+uuid: bf0b364d-fa11-443e-980b-f0c1fd4540fa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:view_render:5c26ff07-ca03-4600-84f7-5f5b6157cb3a'
+  module:
+    - block_content
+    - system
+  theme:
+    - patasdacasa
+id: ultimasmaterias
+theme: patasdacasa
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:5c26ff07-ca03-4600-84f7-5f5b6157cb3a'
+settings:
+  id: 'block_content:5c26ff07-ca03-4600-84f7-5f5b6157cb3a'
+  label: 'Últimas Matérias'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /site/quem-somos

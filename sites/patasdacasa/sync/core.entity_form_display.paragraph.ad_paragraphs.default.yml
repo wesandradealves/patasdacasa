@@ -1,0 +1,36 @@
+uuid: 0aaf488d-55ca-4053-acec-cf500661c490
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ad_paragraphs.field_ad_paragraphs_image
+    - field.field.paragraph.ad_paragraphs.field_ad_paragraphs_url
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.ad_paragraphs
+  module:
+    - link
+    - svg_image
+id: paragraph.ad_paragraphs.default
+targetEntityType: paragraph
+bundle: ad_paragraphs
+mode: default
+content:
+  field_ad_paragraphs_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_ad_paragraphs_url:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

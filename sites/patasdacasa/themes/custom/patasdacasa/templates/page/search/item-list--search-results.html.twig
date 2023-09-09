@@ -1,0 +1,86 @@
+{% extends "item-list.html.twig" %}
+{#
+/**
+    * @file
+    * Theme override for an item list of search results.
+    *
+    * Available variables:
+    * - items: A list of items. Each item contains:
+    *   - attributes: HTML attributes to be applied to each list item.
+    *   - value: The content of the list element.
+    * - title: The title of the list.
+    * - list_type: The tag for list element ("ul" or "ol").
+    * - attributes: HTML attributes to be applied to the list.
+    * - empty: A message to display when there are no items. Allowed value is a
+    *   string or render array.
+    * - context: An list of contextual data associated with the list. For search
+    *   results, the following data is set:
+    *   - plugin: The search plugin ID, for example "node_search".
+    *
+    * @see template_preprocess_item_list()
+    */
+#}
+{%
+    set classes = [
+    'search-results',
+    context.plugin ~ '-results',
+    ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+{% block content %}
+  {{ attach_library('patasdacasa/search') }}
+
+  <div class="main-news-row">
+      <div class="d-flex flex-column flex-lg-row flex-wrap align-items-stretch justify-content-between">
+        <div class="d-flex flex-column flex-lg-row flex-wrap col-12 col-lg-8">
+            {% if items or empty %}
+              {%- if items -%}
+                <h3 class="d-flex flex-column flex-md-row p-4 justify-content-between align-items-center block-title w-100 mb-4 --search">
+                  <span class="flex-fill">Resultados para: {{keyword}}</span> 
+                  <span class="text-end ps-4">{{items|length}} resultados</span>
+                </h3>
+                
+                <{{ list_type }}{{ attributes }}>
+                    {%- for item in items -%}
+                      {% set nid = item['value']['#result']['node'].id %}
+                      {% set node = getNode(nid) %}
+                      
+                      {% if node.type == 'article' %}
+                        <li{{ item.attributes.addClass(['col-12 col-md-6 col-lg-4 p-2', node.type]) }}>
+                          {% include directory ~ '/templates/partials/post-card/post-card.html.twig' with { 
+                              data: {
+                                  nid: node.nid,
+                                  title: node.title,
+                                  text: node.text|slice(0, 132)|raw ~ '...',
+                                  url: node.url,
+                                  image: node.image,
+                                  terms: {
+                                      tid: node.terms.0.tid,
+                                      parent: node.terms.0.parent.tid,
+                                      name: node.terms.0.name,
+                                      field_taxonomy_theme: node.terms.0.parent ? node.terms.0.parent.field_taxonomy_theme : node.terms.0.field_taxonomy_theme
+                                  }
+                              }, 
+                              layout: '',
+                              index: key
+                          } %}                  
+                        </li>
+                      {% endif %}
+                    {%- endfor -%}
+                </{{ list_type }}>
+
+                {{pager}}
+            {%- else -%}
+            {{- empty -}}
+            {%- endif -%}
+            {%- endif %}
+        </div>
+        
+        {% include directory ~ '/templates/partials/sidebar/sidebar.html.twig' with { 
+          class: ['col-12', 'col-lg-4', 'ps-lg-4', 'mt-5', 'mt-lg-0']
+        } %}  
+      </div>
+  </div>   
+{% endblock %}

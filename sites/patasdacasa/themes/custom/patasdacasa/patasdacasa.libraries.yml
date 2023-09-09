@@ -1,0 +1,198 @@
+global-styling:
+  dependencies:
+    - core/drupal.dialog.ajax
+    - core/jquery
+    - core/drupal
+  js:
+    assets/js/global.js: {}
+    assets/js/jquery.mask.min.js: {}
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap: {}
+      assets/css/fonts.scss: {}
+      assets/css/reset.scss: {}
+      assets/css/style.scss: {}
+
+jquery:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}
+
+fontawesome:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js: {}
+
+custom-scrollbar:
+  js:
+    //malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js: {}
+  css:
+    theme:
+      //malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css: {}
+
+hamburger:
+  css:
+    component:
+      assets/css/vendor/hamburgers.min.css: {}
+
+bootstrap:
+  js:
+    //cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css: {}
+
+owl_carousel:
+  js:
+    //owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js: {}
+  css:
+    component:
+      //owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css: {}
+      //owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css: {}
+
+pacejs:
+  js:
+    assets/js/vendor/pace.min.js: {}
+  css:
+    component:
+      assets/css/vendor/pace.scss: {}
+
+tinyslider:
+  css:
+    component:
+      assets/css/vendor/tiny-slider.css: {}
+
+login:
+  css:
+    component:
+      templates/page/login/style.scss: {}
+
+especialista:
+  css:
+    component:
+      templates/views/especialista/style.scss: {}
+
+author:
+  css:
+    component:
+      templates/views/author/style.scss: {}
+
+livenews:
+  css:
+    component:
+      templates/views/livenews/style.scss: {}
+
+home:
+  css:
+    component:
+      templates/page/home/style.scss: {}
+
+header:
+  css:
+    component:
+      templates/block/header/style.scss: {}
+
+banner:
+  css:
+    component:
+      templates/paragraphs/banner/style.scss: {}
+
+footer:
+  css:
+    component:
+      templates/block/footer/style.scss: {}
+
+breadcrumb:
+  css:
+    component:
+      templates/block/breadcrumb/style.scss: {}
+
+cta_row:
+  css:
+    component:
+      templates/block/cta-row/style.scss: {}
+
+
+featured_content_grid:
+  css:
+    component:
+      templates/block/featured-content-grid/style.scss: {}
+
+news_grid:
+  css:
+    component:
+      templates/views/news_grid/style.scss: {}
+
+taxonomy:
+  css:
+    component:
+      templates/views/taxonomy/style.scss: {}
+
+sidebar:
+  css:
+    component:
+      templates/partials/sidebar/style.scss: {}
+
+post_card:
+  css:
+    component:
+      templates/partials/post-card/style.scss: {}
+
+author_block:
+  css:
+    component:
+      templates/partials/author-block/style.scss: {}
+
+node:
+  css:
+    component:
+      templates/node/style.scss: {}
+
+archive:
+  css:
+    component:
+      templates/views/archive/style.scss: {}
+
+most_viewed:
+  css:
+    component:
+      templates/views/most_viewed/style.scss: {}
+
+pager:
+  css:
+    component:
+      templates/navigation/pager/style.scss: {}
+
+override:
+  css:
+    component:
+      assets/css/overrides.scss: {}
+
+quiz:
+  css:
+    theme:
+      templates/views/quiz/style.scss: {}
+
+polyfill:
+  js:
+    //cdn.polyfill.io/v3/polyfill.min.js: {}
+
+vue:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js: {}
+
+vue-router:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3/vue-router.min.js: {}
+
+vuex:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/vuex/3.1.2/vuex.min.js: {}
+
+axios:
+  version: 0.19.2
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js: {}
+
+search:
+  css:
+    theme:
+        templates/page/search/style.scss: {}

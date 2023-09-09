@@ -1,0 +1,20 @@
+uuid: 7c39da76-1f4d-43b9-ae8f-fecd10a2d7a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_especialista
+field_name: field_especialista
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

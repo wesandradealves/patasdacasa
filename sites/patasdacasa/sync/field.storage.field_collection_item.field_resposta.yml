@@ -1,0 +1,21 @@
+uuid: bee1be31-9718-41d3-b991-6f2fd6d96de9
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_collection
+id: field_collection_item.field_resposta
+field_name: field_resposta
+entity_type: field_collection_item
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 9e8b9318-db13-466b-8598-3d29663155c3
+langcode: en
+status: true
+dependencies: {  }
+id: featured_content_grid
+label: 'Featured Content Grid'
+revision: 0
+description: 'Block grid for featured posts'

@@ -1,0 +1,11 @@
+uuid: 54c65b64-e4e0-41d5-924e-65c977bda98c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resultados
+id: node.resultados
+target_entity_type_id: node
+target_bundle: resultados
+default_langcode: site_default
+language_alterable: false

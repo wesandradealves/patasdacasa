@@ -1,0 +1,22 @@
+uuid: 6f4bb4af-89a7-4ac9-9a95-f4fac09a27ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - patasdacasa
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: patasdacasa_content
+theme: patasdacasa
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

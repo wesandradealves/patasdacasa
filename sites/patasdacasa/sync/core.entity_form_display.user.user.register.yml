@@ -1,0 +1,64 @@
+uuid: a093df4a-7b7d-4ee5-b45a-c26dde9c0c85
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.field_user_description
+    - field.field.user.user.field_user_fullname
+    - field.field.user.user.field_user_social_role
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - svg_image
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_description:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_user_fullname:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_user_social_role:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  contact: true
+  langcode: true
+  language: true
+  path: true
+  timezone: true

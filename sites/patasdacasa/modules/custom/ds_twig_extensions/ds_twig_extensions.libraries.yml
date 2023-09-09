@@ -1,0 +1,10 @@
+vue-app:
+  version: 1.0
+  js:
+    app/dist/js/app.js: {}
+  css:
+    theme:
+      app/dist/css/app.css: {}
+  dependencies:
+    - patasdacasa/vue
+    - patasdacasa/axios

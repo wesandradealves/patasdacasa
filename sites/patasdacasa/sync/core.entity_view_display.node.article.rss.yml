@@ -1,0 +1,49 @@
+uuid: 069639b7-855d-4311-8fbe-790e0914ebb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_custom_editor
+    - field.field.node.article.field_destaque_live_news
+    - field.field.node.article.field_especialista
+    - field.field.node.article.field_exibir_quiz
+    - field.field.node.article.field_image
+    - field.field.node.article.field_node_date
+    - field.field.node.article.field_node_share
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  links:
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  breadcrumbs: true
+  comment: true
+  field_custom_editor: true
+  field_destaque_live_news: true
+  field_especialista: true
+  field_exibir_quiz: true
+  field_image: true
+  field_node_date: true
+  field_node_share: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true
+  social_sharing: true

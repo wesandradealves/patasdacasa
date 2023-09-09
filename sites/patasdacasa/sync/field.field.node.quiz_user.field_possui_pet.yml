@@ -1,0 +1,21 @@
+uuid: 0440375f-7b3e-4d01-97f8-f17ea15812be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_possui_pet
+    - node.type.quiz_user
+  module:
+    - options
+id: node.quiz_user.field_possui_pet
+field_name: field_possui_pet
+entity_type: node
+bundle: quiz_user
+label: 'Possui Pet'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

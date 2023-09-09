@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the ap_quiz module.
+ */
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function ap_quiz_install() {
+  if ($add_permission = Role::load('editor')) {
+    $add_permission->grantPermission('manage adota patas quiz');
+    $add_permission->save();
+  }
+  Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ap_quiz_uninstall() {
+  Drupal::messenger()->addStatus(__FUNCTION__);
+}

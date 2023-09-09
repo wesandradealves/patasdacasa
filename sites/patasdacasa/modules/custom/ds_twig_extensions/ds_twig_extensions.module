@@ -1,0 +1,142 @@
+<?php 
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+use Drupal\Core\Database\Query;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File; 
+use Drupal\core\Url; 
+use \Drupal\block\Entity\Block;
+use Drupal\taxonomy\Entity\Term;      
+use Drupal\Core\Link;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Breadcrumb\Breadcrumb;
+use Drupal\Core\Entity\EntityBase;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\Entity\Node;
+use Symfony\Component\HttpFoundation\Request;
+use \Drupal\user\Entity\User;
+use Cocur\Slugify\Slugify;
+
+function ds_twig_extensions_preprocess_page(&$variables) {
+  $variables['page']['#attached']['library'][] = $variables['#attached']['library'][] = 'ds_twig_extensions/vue-app';
+}
+
+function ds_twig_extensions_views_pre_view(ViewExecutable $view) {
+  if($view->id() == 'archive' && $view->current_display == 'block_5' && $view->args[1]) {
+    $view->setItemsPerPage($view->args[1]);
+  }
+}
+
+// function ds_twig_extensions_preprocess_views_view(ViewExecutable $view, QueryPluginBase $query) {
+// function ds_twig_extensions_views_query_alter(&$view, &$query) {
+//   // $query->addWhere(0, 'node__field_data.nid', [1,2,3], 'IN');
+//   switch ($view->storage->id()) {
+//     case 'author':
+//         if ($view->current_display == 'page_1') {          
+//           $path = \Drupal::request()->getpathInfo();
+
+//           $alias = explode('/', $path)[2];
+
+//           $url = Url::fromUri('internal:' . '/' . $alias);
+
+//           if ($url->isRouted()) {
+//               $params = $url->getRouteParameters();
+//               $entity = \Drupal::entityTypeManager()->getStorage('user')->load($params['user']);
+//               $user = [alias => $alias, type => 'user', id => intval($params['user']), entity => $entity];
+//               $uid = $user['id'];
+
+//               // $query = \Drupal::entityQuery('node')
+//               // ->condition('type', 'article');
+//               // $query->execute();            
+              
+//               // $query->where[0]['conditions'][0]["value"][":taxonomy_index_tid"] = 2;
+
+//               // dump($query);
+
+//               $query = Drupal::entityQuery('node')->condition('type', 'article');
+              
+//               // $group = $query->orConditionGroup()
+//               // ->condition('uid', 22)
+//               // ->condition('uid', 14)
+//               // ->condition('uid.entity.name', 'admin')
+
+//               $group_2 = $query->andConditionGroup()
+//                 ->condition('field_custom_editor', $uid);
+
+//               $group_1 = $query->andConditionGroup()
+//                 ->condition('uid', $uid) 
+//                 ->condition('field_custom_editor', '');
+
+//               $group = $query->orConditionGroup()
+//                 ->condition($group_1)
+//                 ->condition($group_2);
+
+//               $query->condition($group);
+
+//               // dump($query->execute());
+//               global $rows;
+//               $rows = $query->execute();
+
+//               // dump($query);
+//             // $query->condition('field1', [1, 2], 'IN');
+//             // $orGroup = $query->orConditionGroup();
+
+//             // $orGroup->condition('field2', 5)->condition('field3', 6);
+//             // $query->condition($orGroup)
+
+//               // print $uid;
+//               // dump($query);
+//               // $query->where[1]['conditions'][] = array('field' => 'node.custom_editor', 'value' => $uid, 'operator' => '=');
+
+//               // $queryByUid = \Drupal::entityQuery('node')->condition('type', 'page');
+//               // $query->condition('uid', $uid, '=');
+//               // $query->add_orderby(NULL, NULL, 'ASC', 'distance'); 
+          
+//               // $query->condition('field_custom_editor', $uid, '=');
+//               // $query->sort('created', 'DESC');
+
+//               // $orGroup1 = $query->orConditionGroup()
+//               // ->condition('a', 1)
+//               // ->condition('b', 1);
+              
+//               // $andGroup1 = $query->andConditionGroup()
+//               //   ->condition('c', 1)
+//               //   ->condition('d', 1);
+                
+//               // $orGroup2 = $query->orConditionGroup()
+//               //   ->condition($andGroup1)
+//               //   ->condition('e', 1);
+                
+//               // $query->condition($orGroup1);
+//               // $query->condition($orGroup2);
+
+//               // $query->setGroupOperator('OR');
+
+//               // $query->setWhereGroup('AND', 1);
+//               // $query->addWhere(1, "node__{$fieldName}.{$fieldName}_value", $first, "<=");
+//               // $query->addWhere(1, "node__{$fieldName}.{$fieldName}_end_value", $first, ">=");
+              
+//               // $query->setWhereGroup('AND', 2);
+//               // $query->addWhere(2, "node__{$fieldName}.{$fieldName}_value", $first, ">=");
+//               // $query->addWhere(2, "node__{$fieldName}.{$fieldName}_end_value", $last, "<=");
+
+
+
+//               // $query->group_operator = 'OR';
+//               // $query->add_where(1, $or_statement);
+//               // $query->addWhere(0, 'node__field_data.nid', [1,2,3], 'IN');
+//               // $view->set_items_per_page(2);  
+//               // return [alias => $alias, type => 'user', id => intval($params['user']), entity => $entity];
+//           }            
+//           // $view->set_items_per_page(2);  
+//           // dump($view);
+//           // $view->pager['items_per_page'] = 3;
+//         }
+//         break;
+//   }  
+// }

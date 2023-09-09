@@ -1,0 +1,44 @@
+@import '../../../assets/css/variables.scss';
+
+.hero {
+    position: relative;
+    [class*="container"] {
+        position: inherit;
+    }
+    &[data-type="container-style"] {
+        img {
+            border-radius: 20px;
+        }
+    }
+    picture {
+        position: relative;
+        z-index: 1;
+        img {
+            width: 100%;
+        }
+    }
+    &-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        > .row {
+            height: 35%;
+            @media screen and (min-width: 810px) { 
+                height: auto;
+                margin-top: -80px;
+            }
+        }
+    }
+    &-title {
+        font-size: 2rem;
+        @media screen and (min-width: 768px) { 
+            font-size: 3rem;
+        }
+        color: white;
+        font-weight: bold;
+        word-break: break-word;
+    }
+}

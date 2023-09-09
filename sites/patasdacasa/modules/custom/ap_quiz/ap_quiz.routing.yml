@@ -1,0 +1,14 @@
+ap_quiz.form:
+  path: '/quiz-form'
+  defaults:
+    _form: '\Drupal\ap_quiz\Form\AdotaPatasQuizFormAjax'
+    _title: 'Formulário Quiz'
+  requirements:
+    _permission: 'access content'
+ap_quiz.resultado:
+  path: '/quizre/{node_type}'
+  defaults:
+    _controller: '\Drupal\ap_quiz\Controller\QuizResultsController::results'
+    _title: 'Resultado Quiz'
+  requirements:
+    _permission: 'access content'

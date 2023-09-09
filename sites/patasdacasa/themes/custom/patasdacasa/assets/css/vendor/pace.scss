@@ -1,0 +1,62 @@
+@import '../variables.scss';
+
+@keyframes opacity {
+    from {opacity: 0px;}
+    to {opacity: 1;}
+}
+
+body {
+    &[class*="pace-running"] {
+        .app-loader {
+            display: flex !important;
+        }
+    }    
+    &[class*="pace-done"] {
+        #wrap {
+            display: flex !important;
+        }
+    }
+}
+
+#wrap {
+    opacity: 0;
+    transition: 500ms ease all;
+    animation: opacity 500ms forwards;
+}
+
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none
+}
+
+.pace .pace-progress {
+    background: $lightblue;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+
+.app-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $lightblue;
+    filter: hue-rotate(-27deg) brightness(1) contrast(1);
+    img {
+        object-fit: contain;
+    }
+}
